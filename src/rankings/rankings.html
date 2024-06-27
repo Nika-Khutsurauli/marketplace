@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rankings</title>
+</head>
+<body>
+<header class="container-fluid">
+    <nav class="navbar navbar-expand-lg">  
+        <a href="../index.html" class="navbar-brand">
+        <img class="img-fluid" src="../images/logo.svg" alt="home">
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <img src="../images/nav-burger-menu.svg">
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu"> 
+        <ul class="navbar-nav ms-auto gap-4 m-3">
+            <li class="nav-item"><a class="nav-link" href="../marketplace/marketplace.html">Marketplace</a></li>
+            <li class="nav-item"><a class="nav-link" href="../rankings/rankings.html">Rankings</a></li>
+            <li class="nav-item"><a class="nav-link" href="../wallet/wallet.html">Connect a wallet</a></li>     
+        </ul> 
+        <a href="../sign/signup.html" class="btn d-flex justify-content-center align-items-center gap-2">
+            <img src="../images/User-logo.svg" alt="">
+            <span>Sign Up</span>
+        </a>
+        </div>
+    </nav>
+</header>
+<main>
+<section>
+  <div class="container mt-5">
+    <h1 class="rankings-heading">Top Creators</h1>
+    <p class="rankings-subheading">Check out top ranking NFT artists on the NFT Marketplace.</p>
+  </div>
+</section>
+<section>
+  <div class="text-center mt-5">
+    <div class="container">
+        <ul class="navbar-nav tab-links m-0" id="menu">
+            <li id="menu-nft" class="nav-item col-3 switch-menu"><a class="nav-link active" href="#">Today</a></li>
+            <li id="menu-nft" class="nav-item col-3 switch-menu"><a class="nav-link" href="#">This Week</a></li>
+            <li id="menu-nft" class="nav-item col-3 switch-menu"><a class="nav-link" href="#">This Month</a></li>
+            <li id="menu-nft" class="nav-item col-3 switch-menu"><a class="nav-link" href="#">All Time</a></li>
+        </ul>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container mt-5 mb-5">
+    <div class="rankings-top-head">
+      <div class="row">
+        <div class="col-5 table-header-top d-flex justify-content-end justify-content-sm-center justify-content-md-center p-0">
+          <div class="col-1 mx-2 mx-sm-0 mx-md-0">
+            <span>#</span>
+          </div>
+          <div class="col-10">
+            <span>Artist</span>
+          </div>
+        </div>
+        <div class="col-7 table-header-top d-flex justify-content-end justify-content-sm-center justify-content-md-center">
+          <div class="col-4 d-none d-sm-block d-md-block">
+            <span>Change</span>
+          </div>
+          <div class="col-4 d-none d-sm-block d-md-block">
+            <span>NFTs Sold</span>
+          </div>
+          <div class="col-4 text-end text-sm-start text-md-start">
+            <span>Volume</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rankings-card" onclick="location='../artistpage/artistpage.html'">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">1</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-1.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Jaydon Ekstrom Bothman</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">2</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-2.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Jaydon Ekstrom Bothman</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">3</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-3.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Alfredo Septimus</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">4</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-4.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Davis Franci</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">5</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-5.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Livia Rosser</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">6</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-6.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Kianna Donin</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">7</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-7.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Phillip Lipshutz</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">8</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-8.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Maria Rosser</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold d-none">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">9</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-9.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Kianna Stanton</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">10</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-10.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Angel Lubin</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">11</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-11.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Allison Torff</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">12</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-12.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Davis Workman</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">13</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-13.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Lindsey Lipshutz</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">14</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-14.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Randy Carder</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">15</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-15.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Lydia Culhane</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">16</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-16.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Rayna Bator</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">17</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-17.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Jocelyn Westervelt</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">18</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-18.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Marilyn Torff</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">19</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-19.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Skylar Levin</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+    <div class="rankings-card">
+      <div class="row">
+        <div class="col-7 col-sm-5 col-sm-5 table-header-1">
+          <div class="col-1">
+            <span class="rounded-number rounded-circle text-center">20</span>
+          </div>
+          <div class="col-2 avatar">
+            <img class="img-fluid" src="../images/avatars/avatar-20.png" alt="">
+          </div>
+          <div class="col-9">
+            <p class="m-0 avatar-text">Jaydon Ekstrom Bothman</p>
+          </div>
+        </div>                  
+        <div class="col-5 col-sm-7 col-md-7 table-header-2">
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 txt-color">+1.41%</p>
+          </div>
+          <div class="col-sm-4 col-md-4 d-none d-sm-block d-md-block">
+            <p class="m-0 nft-sold">602</p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-4">
+            <p class="m-0 nft-volume">12.4 ETH</p>
+          </div>  
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer-section mt-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-12">
+          <div class="footer-logo">
+            <img class="img-fluid" src="../images/logo.svg" alt="">
+          </div>
+          <p class="mt-2 mb-2 text-start text-secondary ff-work footer-head">NFT marketplace UI created with Anima for Figma.</p>
+          <p class="mt-2 mb-2 text-start text-secondary ff-work footer-subhead">Join our community</p>
+          <ul class="navbar-nav d-flex flex-row">
+            <li class="nav-item me-3 me-lg-2">
+              <a class="nav-link p-0" href="#">
+                <img src="../images/footer-social/DiscordLogo.png" alt="">
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-2">
+              <a class="nav-link p-0" href="#">
+                <img src="../images/footer-social/YoutubeLogo.png" alt="">
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-2">
+              <a class="nav-link p-0" href="#">
+                <img src="../images/footer-social/TwitterLogo.png" alt="">
+              </a>
+            </li>
+            <li class="nav-item me-3 me-lg-2">
+              <a class="nav-link p-0" href="#">
+                <img src="../images/footer-social/InstagramLogo.png" alt="">
+              </a> 
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-12 mt-4 mt-md-0">
+          <nav class="navbar align-items-md-center justify-content-md-center p-0">
+            <ul class="navbar-nav">
+              <h5 class="ff-mono fs-5">Explore</h5>
+              <li class="nav-item"><a class="nav-link text-secondary ff-work" href="#">Marketplace</a></li>
+              <li class="nav-item"><a class="nav-link text-secondary ff-work" href="#">Rankings</a></li>
+              <li class="nav-item"><a class="nav-link text-secondary ff-work" href="#">Connect a wallet</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-5 col-sm-12 mt-4 mt-md-0">
+          <h5 class="ff-mono fs-5">Join our weekly digest</h5>
+          <p class="text-secondary ff-work m-0">Get exclusive promotions & updates straight to your inbox.</p>
+          <div class="footer-subscribe-form mt-2">
+            <form>
+                <input type="text" id="useremail" name="useremail" autocomplete="off" placeholder="Enter your email here">
+                <button class="footer-button">
+                  <img class="d-block d-sm-none d-md-none" src="../images/icons/message-icon.svg" alt="">
+                  Subscribe
+                </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright border-top border-secondary mt-5">
+        <p class="ff-work text-secondary mt-2">Ⓒ NFT Market. Use this template freely.</p>
+      </div>
+    </div>
+</footer>
+</body>
+</html>

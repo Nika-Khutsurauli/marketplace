@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist</title>
+</head>
+<body>
+<header class="container-fluid">
+    <nav class="navbar navbar-expand-lg">  
+        <a href="../index.html" class="navbar-brand">
+        <img class="img-fluid" src="../images/logo.svg" alt="home">
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <img src="../images/nav-burger-menu.svg">
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu"> 
+            <ul class="navbar-nav ms-auto gap-4 m-3">
+                <li class="nav-item"><a class="nav-link" href="../marketplace/marketplace.html">Marketplace</a></li>
+                <li class="nav-item"><a class="nav-link" href="../rankings/rankings.html">Rankings</a></li>
+                <li class="nav-item"><a class="nav-link" href="../wallet/wallet.html">Connect a wallet</a></li>     
+            </ul> 
+            <a href="../sign/signup.html" class="btn d-flex justify-content-center align-items-center gap-2">
+                <img src="../images/User-logo.svg" alt="">
+                <span>Sign Up</span>
+            </a>
+        </div>
+    </nav>
+</header>
+
+<main>
+<section>
+    <div class="maindiv-bg"> 
+        <div class="virtual_world"></div>
+        <div class="container container-avatar">
+            <div class="pg-avatar"></div>
+        </div>
+    </div>
+</section>
+<section> 
+    <div class="main-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h1 class="artistpage-heading">Animakid</h1>
+                    <div class="stats">
+                        <div class="col-4">
+                            <h4>250k+</h4>
+                            <span>Volume</span>
+                        </div>
+                        <div class="col-4">
+                            <h4>50+</h4>
+                            <span>NFTs Sold</span>
+                        </div>
+                        <div class="col-4">
+                            <h4>3000+</h4>
+                            <span>Followers</span>
+                        </div>
+                    </div>
+                    <div class="col-12 artist-bio">
+                            <span>Bio</span>
+                            <p>The internet's friendliest designer kid.</p>
+                    </div>
+                    <div class="col-12 artist-links">
+                        <span>Links</span>
+                        <div class="links">
+                            <a href="#"><img src="../images/marketplace/nft-page/globe.png" alt=""></a>
+                            <a href="#"><img src="../images/footer-social/DiscordLogo.png" alt=""></a>
+                            <a href="#"><img src="../images/footer-social/YoutubeLogo.png" alt=""></a>
+                            <a href="#"><img src="../images/footer-social/TwitterLogo.png" alt=""></a>
+                            <a href="#"><img src="../images/footer-social/InstagramLogo.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="artistpage_buttons">
+                        
+                        <a class="artist-button" href="#">
+                            <img class="img-fluid" src="../images/artistpage/Copy.png" alt="">
+                            0xc0E3...B79C
+                        </a>
+                    
+                        <a class="button-dark" href="">
+                            <img src="../images/artistpage/plus.png" alt="">
+                            Follow
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="card-containers-head  text-center top-hr">
+        <div class="container">
+            <ul class="navbar-nav tab-links m-0" id="menu">
+                <li id="menu-nft" class="nav-item col-4 switch-menu"><a class="nav-link active" href="#created">Created</a></li>
+                <li id="menu-collection" class="nav-item col-4 switch-menu"><a class="nav-link" href="#owned">Owned</a></li>
+                <li id="menu-collection" class="nav-item col-4 switch-menu"><a class="nav-link" href="#collection">Collection</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="card-containers">
+        <div class="container">
+            <div class="row pt-3 pb-3 row-gap-4">
+                <div id="tab1" onclick="location='../nft-page/nftpage.html'" class="tab col-sm-6 col-md-4 mt-4 mt-sm-0 mt-md-0">
+                <img class="w-100" src="../images/marketplace/marketplace-image1.png" alt="">
+                    <div class="marketplace-card p-3">
+                        <div class="col-12"> 
+                            <h5 class="content-head fw-bold">Magic Mushroom 0325</h5>
+                            <div class="d-flex justify-content-start align-items-center">
+                                <img class="icon-size img-fluid" src="../images/avatars/avatar-7.png" alt="">
+                                <p class="m-0 m-2 fs-small">Shroomie</p>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex py-3 justify-content-between align-items-center"> 
+                            <div class="col-6">
+                                <p class="nft-d-text text-secondary fs-medium fs-small">Price</p>                  
+                                <p class="nft-d-num ff-mono">1.63 ETH</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="nft-d-text text-secondary fs-medium fs-small text-end">Highest Bid</p>
+                                <p class="nft-d-num ff-mono text-end">0.33 wETH</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab2" class="tab col-sm-6 col-md-4 mt-4 mt-sm-0 mt-md-0">
+                <img class="w-100" src="../images/marketplace/marketplace-image2.png" alt="">
+                    <div class="marketplace-card p-3">
+                    <div class="col-12"> 
+                        <h5 class="content-head fw-bold">Happy Robot 032</h5>
+                        <div class="d-flex justify-content-start align-items-center">
+                            <img class="icon-size img-fluid" src="../images/avatars/avatar-15.png" alt="">
+                            <p class="m-0 m-2 fs-small">BeKind2Robots</p>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex py-3 justify-content-between align-items-center"> 
+                        <div class="col-6">
+                            <p class="nft-d-text text-secondary fs-medium fs-small">Price</p>                  
+                            <p class="nft-d-num ff-mono">1.63 ETH</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="nft-d-text text-secondary fs-medium fs-small text-end">Highest Bid</p>
+                            <p class="nft-d-num ff-mono text-end">0.33 wETH</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div id="tab3" class="tab col-sm-6 col-md-4 mt-4 mt-sm-0 mt-md-0">
+                    <img class="w-100" src="../images/marketplace/marketplace-image3.png" alt="">
+                    <div class="marketplace-card p-3">
+                        <div class="col-12"> 
+                        <h5 class="content-head fw-bold">Happy Robot 024</h5>
+                        <div class="d-flex justify-content-start align-items-center">
+                            <img class="icon-size img-fluid" src="../images/avatars/avatar-7.png" alt="">
+                            <p class="m-0 m-2 fs-small">BeKind2Robots</p>
+                        </div>
+                        </div>
+                        <div class="col-12 d-flex py-3 justify-content-between align-items-center"> 
+                        <div class="col-6">
+                            <p class="nft-d-text text-secondary fs-medium fs-small">Price</p>                  
+                            <p class="nft-d-num ff-mono">1.63 ETH</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="nft-d-text text-secondary fs-medium fs-small text-end">Highest Bid</p>
+                            <p class="nft-d-num ff-mono text-end">0.33 wETH</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div id="tab4" class="tab col-sm-6 col-md-4 mt-4 mt-sm-0 mt-md-0">
+                    <img class="w-100" src="../images/marketplace/marketplace-image4.png" alt="">
+                    <div class="marketplace-card p-3">
+                        <div class="col-12"> 
+                        <h5 class="content-head fw-bold">Designer Bear</h5>
+                        <div class="d-flex justify-content-start align-items-center">
+                            <img class="icon-size img-fluid" src="../images/avatars/avatar-6.png" alt="">
+                            <p class="m-0 m-2 fs-small">Mr Fox</p>
+                        </div>
+                        </div>
+                        <div class="col-12 d-flex py-3 justify-content-between align-items-center"> 
+                        <div class="col-6">
+                            <p class="nft-d-text text-secondary fs-medium fs-small">Price</p>                  
+                            <p class="nft-d-num ff-mono">1.63 ETH</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="nft-d-text text-secondary fs-medium fs-small text-end">Highest Bid</p>
+                            <p class="nft-d-num ff-mono text-end">0.33 wETH</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div id="tab5" class="tab col-sm-6 col-md-4 mt-4 mt-sm-0 mt-md-0">
+                    <img class="w-100" src="../images/marketplace/marketplace-image5.png" alt="">
+                    <div class="marketplace-card p-3">
+                        <div class="col-12"> 
+                        <h5 class="content-head fw-bold">Colorful Dog 0356</h5>
+                        <div class="d-flex justify-content-start align-items-center">
+                            <img class="icon-size img-fluid" src="../images/avatars/avatar-11.png" alt="">
+                            <p class="m-0 m-2 fs-small">Keepitreal</p>
+                        </div>
+                        </div>
+                        <div class="col-12 d-flex py-3 justify-content-between align-items-center"> 
+                        <div class="col-6">
+                            <p class="nft-d-text text-secondary fs-medium fs-small">Price</p>                  
+                            <p class="nft-d-num ff-mono">1.63 ETH</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="nft-d-text text-secondary fs-medium fs-small text-end">Highest Bid</p>
+                            <p class="nft-d-num ff-mono text-end">0.33 wETH</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div id="tab6" class="tab col-sm-6 col-md-4 mt-4 mt-sm-0 mt-md-0 d-none d-sm-block">
+                    <img class="w-100" src="../images/marketplace/marketplace-image6.png" alt="">
+                    <div class="marketplace-card p-3">
+                        <div class="col-12"> 
+                        <h5 class="content-head fw-bold">Dancing Robot 0312</h5>
+                        <div class="d-flex justify-content-start align-items-center">
+                            <img class="icon-size img-fluid" src="../images/avatars/avatar-8.png" alt="">
+                            <p class="m-0 m-2 fs-small">Robotica</p>
+                        </div>
+                        </div>
+                        <div class="col-12 d-flex py-3 justify-content-between align-items-center"> 
+                        <div class="col-6">
+                            <p class="nft-d-text text-secondary fs-medium fs-small">Price</p>                  
+                            <p class="nft-d-num ff-mono">1.63 ETH</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="nft-d-text text-secondary fs-medium fs-small text-end">Highest Bid</p>
+                            <p class="nft-d-num ff-mono text-end">0.33 wETH</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div id="tab7" class="tab col-sm-6 col-md-4 mt-4 mt-sm-0 mt-md-0 d-none d-sm-block">
+                    <img class="w-100" src="../images/marketplace/marketplace-image7.png" alt="">
+                    <div class="marketplace-card p-3">
+                        <div class="col-12"> 
+                        <h5 class="content-head fw-bold">Cherry Blossom Girl 035</h5>
+                        <div class="d-flex justify-content-start align-items-center">
+                            <img class="icon-size img-fluid" src="../images/avatars/avatar-20.png" alt="">
+                            <p class="m-0 m-2 fs-small">MoonDancer</p>
+                        </div>
+                        </div>
+                        <div class="col-12 d-flex py-3 justify-content-between align-items-center"> 
+                        <div class="col-6">
+                            <p class="nft-d-text text-secondary fs-medium fs-small">Price</p>                  
+                            <p class="nft-d-num ff-mono">1.63 ETH</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="nft-d-text text-secondary fs-medium fs-small text-end">Highest Bid</p>
+                            <p class="nft-d-num ff-mono text-end">0.33 wETH</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div id="tab8" class="tab col-sm-6 col-md-4 mt-4 mt-sm-0 mt-md-0 d-none d-sm-block">
+                    <img class="w-100" src="../images/marketplace/marketplace-image8.png" alt="">
+                    <div class="marketplace-card p-3">
+                        <div class="col-12"> 
+                        <h5 class="content-head fw-bold">Space Travel</h5>
+                        <div class="d-flex justify-content-start align-items-center">
+                            <img class="icon-size img-fluid" src="../images/avatars/avatar-13.png" alt="">
+                            <p class="m-0 m-2 fs-small">NebulaKid</p>
+                        </div>
+                        </div>
+                        <div class="col-12 d-flex py-3 justify-content-between align-items-center"> 
+                        <div class="col-6">
+                            <p class="nft-d-text text-secondary fs-medium fs-small">Price</p>                  
+                            <p class="nft-d-num ff-mono">1.63 ETH</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="nft-d-text text-secondary fs-medium fs-small text-end">Highest Bid</p>
+                            <p class="nft-d-num ff-mono text-end">0.33 wETH</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div id="tab9" class="tab col-sm-6 col-md-4 mt-4 mt-sm-0 mt-md-0 d-none d-sm-none d-md-block">
+                    <img class="w-100" src="../images/marketplace/marketplace-image9.png" alt="">
+                    <div class="marketplace-card p-3">
+                        <div class="col-12"> 
+                        <h5 class="content-head fw-bold">Sunset Dimension</h5>
+                        <div class="d-flex justify-content-start align-items-center">
+                            <img class="icon-size img-fluid" src="../images/avatars/avatar-10.png" alt="">
+                            <p class="m-0 m-2 fs-small">Animakid</p>
+                        </div>
+                        </div>
+                        <div class="col-12 d-flex py-3 justify-content-between align-items-center"> 
+                        <div class="col-6">
+                            <p class="nft-d-text text-secondary fs-medium fs-small">Price</p>                  
+                            <p class="nft-d-num ff-mono">1.63 ETH</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="nft-d-text text-secondary fs-medium fs-small text-end">Highest Bid</p>
+                            <p class="nft-d-num ff-mono text-end">0.33 wETH</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<footer class="main-footer mt-1">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-4 col-sm-12">
+            <div class="footer-logo">
+            <img class="img-fluid" src="../images/logo.svg" alt="">
+            </div>
+            <p class="mt-2 mb-2 text-start text-secondary ff-work footer-head">NFT marketplace UI created with Anima for Figma.</p>
+            <p class="mt-2 mb-2 text-start text-secondary ff-work footer-subhead">Join our community</p>
+            <ul class="navbar-nav d-flex flex-row">
+            <li class="nav-item me-3 me-lg-2">
+                <a class="nav-link p-0" href="#">
+                <img src="../images/footer-social/DiscordLogo.png" alt="">
+                </a>
+            </li>
+            <li class="nav-item me-3 me-lg-2">
+                <a class="nav-link p-0" href="#">
+                <img src="../images/footer-social/YoutubeLogo.png" alt="">
+                </a>
+            </li>
+            <li class="nav-item me-3 me-lg-2">
+                <a class="nav-link p-0" href="#">
+                <img src="../images/footer-social/TwitterLogo.png" alt="">
+                </a>
+            </li>
+            <li class="nav-item me-3 me-lg-2">
+                <a class="nav-link p-0" href="#">
+                <img src="../images/footer-social/InstagramLogo.png" alt="">
+                </a> 
+            </li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-12 mt-4 mt-md-0">
+            <nav class="navbar align-items-md-center justify-content-md-center p-0">
+            <ul class="navbar-nav">
+                <h5 class="ff-mono fs-5">Explore</h5>
+                <li class="nav-item"><a class="nav-link text-secondary ff-work" href="#">Marketplace</a></li>
+                <li class="nav-item"><a class="nav-link text-secondary ff-work" href="#">Rankings</a></li>
+                <li class="nav-item"><a class="nav-link text-secondary ff-work" href="#">Connect a wallet</a></li>
+            </ul>
+            </nav>
+        </div>
+        <div class="col-md-5 col-sm-12 mt-4 mt-md-0">
+            <h5 class="ff-mono fs-5">Join our weekly digest</h5>
+            <p class="text-secondary ff-work m-0">Get exclusive promotions & updates straight to your inbox.</p>
+            <div class="footer-subscribe-form mt-2">
+            <form>
+                <input type="text" id="useremail" name="useremail" autocomplete="off" placeholder="Enter your email here">
+                <button class="footer-button">
+                    <img class="d-block d-sm-none d-md-none" src="../images/icons/message-icon.svg" alt="">
+                    Subscribe
+                </button>
+            </form>
+            </div>
+        </div>
+        </div>
+        <div class="footer-copyright border-top border-secondary mt-5">
+        <p class="ff-work text-secondary mt-2">Ⓒ NFT Market. Use this template freely.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

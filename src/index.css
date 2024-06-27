@@ -1,0 +1,4247 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+
+    /* colors */
+  
+    --clr-black: #2B2B2B;
+    --clr-light-black: #3B3B3B;
+    --clr-grey: #858584; 
+    --clr-white: #ffffff;
+    --clr-action-likeblue: #A259FF;
+  
+    /*  gradient colors */
+  
+    --clr-gradient-blue: linear-gradient(128.15deg, #A259FF 49.75%, #377DF7 136.56%);
+    border-radius: 25.8px;
+    --clr-gradient-bluepurple: linear-gradient(100.92deg, #A259FF 13.57%, #FF6250 97.65%);
+  
+    --btn-primary:var(--clr-action-likeblue);
+    --btn-dark:var(--clr-black);	
+
+  
+    /* font family */
+  
+    --ff-spacemono: 'Space Mono', monospace;
+    --ff-worksans: 'Work Sans', sans-serif;
+    
+    /* font weight */
+  
+    --fw-bold: 700;
+    --fw-semi-bold: 600;
+    --fw-regular: 400;
+    
+    /* font size */
+    --fs-sm: .75rem;
+    --fs-md: 1rem;
+    --fs-100: .5rem;
+    --fs-200: .75rem;
+    --fs-300: 1rem;
+    --fs-400: 1.375rem;
+    --fs-500: 1.75rem;
+    --fs-600: 2rem;
+    --fs-700: 2.375rem;
+    --fs-800: 3.1875rem;
+    --fs-900: 4.1875rem;
+  
+    --fs-body: var(--fs-400);
+    --fs-secondary-heading: var(--fs-600);
+    --fs-nav: var(--fs-500);
+    --fs-button: var(--fs-300);
+    
+
+    /* sizes */
+    --size-100: .25rem;
+    --size-200: .5rem;
+    --size-300: .75rem;
+    --size-400: 1rem;
+    --size-500: 1.5rem;
+    --size-600: 2.5rem;
+    --size-700: 3rem;
+    --size-800: 3.75rem;
+    --size-900: 5rem;
+  
+    --size-view-box: 2rem;
+    --box-spacer: 2rem;
+   
+    --size-nav: 2rem;
+    --size-btn: 1.5rem;
+  
+    --icon-size: var(--size-400);
+   
+  
+  }
+
+  
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* General styling */
+  
+   /* Box sizing rules */
+   *,
+   *::before,
+   *::after {
+     box-sizing: border-box;
+     text-decoration: none;
+   }
+   
+   /* Remove default margin */
+   *{
+     margin: 0;
+     padding: 0;
+     font: inherit;
+     /* background: rgb(0 100 0 / 0.1) !important; */
+   }
+   
+   /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+   ul[role='list'],
+   ol[role='list'] {
+     list-style: none;
+   }
+   
+   /* Set core root defaults */
+   html:focus-within {
+     scroll-behavior: smooth;
+   }
+   html,
+   body{
+     height: 100%;
+   }
+   /* Set core body defaults */
+   body {
+     text-rendering: optimizeSpeed;
+     line-height: 1.5;
+     background-color: var(--clr-black);
+     color: var(--clr-white);
+   }
+   
+   /* A elements that don't have a class get default styles */
+   a:not([class]) {
+     text-decoration-skip-ink: auto;
+   }
+   
+   /* Make images easier to work with */
+   img,
+   picture,
+   svg{
+     max-width: 100%;
+     display: block;
+   }
+   
+
+  a{
+    color: var(--clr-white);
+  }
+  p{
+    text-transform: capitalize;
+  }
+  .btn span{
+    font-weight: var(--fw-bold);
+  }
+  .section-button-dark .button-dark{
+    border: 1px solid var(--clr-action-likeblue);
+    border-radius: var(--size-btn);
+    padding: 1rem 2rem;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-button);
+    color: var(--clr-white);
+    background-color: var(--btn-dark);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+  }
+  
+  /* utility classes */
+  
+  .visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  .text-clr{
+    color: var(--clr-white);
+  }
+  .icon-size{
+    width: var(--icon-size);
+  }
+  
+  .bg-clr{
+    background-color: var(--clr-action-likeblue);
+  }
+  .ff-mono { 
+    font-family: var(--ff-spacemono);
+  }
+  .ff-work { 
+    font-family: var(--ff-worksans);
+  }
+  
+  .fw-bold{ font-weight: var(--fw-bold); }
+  .fw-semi-bold { font-weight: var(--fw-semi-bold); }
+  .fw-regular { font-weight: var(--fw-regular); } 
+  
+  .fs-primary-heading{
+    font-size: var(--fs-800);
+    font-family: var(--ff-worksans);
+    line-height: 1.1;
+    max-width: 20rem;
+  }
+  
+  
+  .fs-small { font-family: var(--ff-spacemono); font-size: var(--fs-sm);}
+  .fs-medium { font-family: var(--ff-spacemono); font-size: var(--fs-md);}
+  .fs-100 {font-size: var(--fs-100);}
+  .fs-200 {font-size: var(--fs-200);}
+  .fs-300 {font-size: var(--fs-300);}
+  .fs-400 {font-size: var(--fs-400);}
+  .fs-500 {font-size: var(--fs-500);}
+  .fs-600 {font-size: var(--fs-600);}
+  .fs-700 {font-size: var(--fs-700);}
+  .fs-900 {font-size: var(--fs-900);}
+  
+  .paddding-block-600{
+    padding-block: var(--size-600);
+  }
+  .paddding-block-800{
+    padding-block: var(--size-800);
+  }
+  .paddding-block-900{
+    padding-block: var(--size-900);
+  }
+  
+  .view-box-h4{
+    font-family: var(--ff-spacemono);
+    font-size: var(--fs-500);
+  }
+  .view-box-span{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-400);
+  }
+  /* marketplace section styles */ 
+  .top-hr{
+    border-top: 1px solid var(--clr-light-black);
+  
+  }
+  .bg{
+    background-color: var(--clr-light-black);
+  }
+  
+  .switch-menu a{
+    text-decoration: none;
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-300);
+   
+  }
+ 
+  .active{
+    border-bottom: 3px solid var(--clr-grey);
+    
+  }
+  
+  .tab-links{
+    display: flex;
+    flex-direction: row;
+  }
+
+ 
+  /* Mobile Version */
+  
+
+  @media only screen and (min-width: 320px) and (max-width:575px){
+    .navbar-brand{
+      width: 150px;
+    }
+    .navbar .navbar-nav .nav-item .nav-link{
+      font-size: 1rem;
+      text-decoration: none;
+      color:var(--clr-white);
+      font-weight: var(--fw-bold);
+      font-family: var(--ff-worksans);
+    }
+  
+    .btn{
+      border: 0;
+      border-radius: var(--size-btn);
+      color: var(--clr-white);
+      background-color: var(--btn-primary);
+      font-family: var(--ff-worksans);
+      cursor: pointer;
+      padding: 1rem 2rem;
+    }
+    .btn:hover{
+      background-color: var(--clr-action-likeblue);
+    }
+
+    .navbar-toggler:focus,
+    .navbar-toggler:active,
+    .navbar-toggler-icon:focus {
+      outline: none;
+      box-shadow: none;
+      border: none;
+    }
+    .fs-primary-heading{
+      font-size: var(--fs-500);
+    }
+    .d-walking{
+      font-size: var(--fs-300);
+      font-family: var(--ff-worksans);
+    }
+    .btn{
+      border: 0;
+      border-radius: var(--size-300);
+      color: var(--clr-white);
+      background-color: var(--btn-primary);
+      font-family: var(--ff-worksans);
+      cursor: pointer;
+      padding: 0.75rem 1.5rem;
+      width: 100%;
+    }
+    .amounts h4{
+      font-family: var(--ff-spacemono);
+      font-size: var(--fs-500);
+   }
+   .amounts span{
+     font-family: var(--ff-worksans);
+    font-size: var(--fs-300);
+   }
+ 
+   .spacewolking-direction-1 img{
+    
+    width: 100%;
+    max-height: 20rem;
+  }
+  .spacewolking-direction-2{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--clr-light-black);
+    font-weight: var(--fw-semi-bold);
+    padding: 1rem;
+    width: 100%;
+    
+
+  }
+  .spacewolking-direction-2 h2{
+    font-size: var(--fs-300);
+    font-family: var(--ff-worksans);
+  }
+  .spacewolking-direction-2 .icon-size{
+    width: 24px;
+    height: 24px;
+  }
+  .spacewolking-direction-2 span{
+    font-size: var(--fs-200);
+    font-family: var(--ff-worksans);
+  }
+
+  .fs-secondary-heading{
+    font-size: var(--fs-700);
+    font-family: var(--ff-worksans);
+  }
+  .top-head{
+    font-size: var(--fs-300);
+    font-family: var(--ff-worksans);
+  }
+  .tc-img .img-fluid{
+    width: 92%;
+  }
+  .t-collection-head{
+    font-size: var(--size-400);
+    font-family: var(--ff-worksans);
+  }
+  .t-collection-d{
+    font-size: var(--size-300);
+    font-family: var(--ff-worksans);
+  }
+ 
+  .section-button-dark .button-dark{
+    border: 1px solid var(--clr-action-likeblue);
+    border-radius: var(--size-400);
+    padding: 0.5rem 1rem;
+    font-weight: var(--fw-bold);
+    font-size: var(--size-400);
+    color: var(--clr-white);
+    background-color: var(--btn-dark);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    width: 100%;
+  }
+  .card{
+    background-color: var(--clr-light-black);
+  }
+ 
+  .rounded-numbers{
+    top: 10%;
+    right:auto;
+    color: var(--clr-grey);
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 1.3rem;
+    font-family: var(--ff-spacemono);
+    font-size: var(--fs-300);
+  }
+  .category-head{
+    
+    font-size: var(--size-500);
+    color: var(--clr-white);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-worksans);
+   
+  }
+  .category-body-1{
+    font-size: var(--fs-300);
+    font-family: var(--ff-worksans);
+  }
+  .category-body-2{
+    font-size: var(--fs-300);
+    font-family: var(--ff-spacemono);
+  }
+  
+  .category-card h5{
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: var(--clr-light-black);
+    font-size: var(--fs-200);
+    font-weight: var(--fw-semi-bold);
+    font-family: var(--ff-worksans);
+    padding: 1.5rem;
+   
+  }
+   
+  .card-row-box{
+    background-color: var(--clr-light-black);
+    border-bottom-left-radius: 1.3rem;
+    border-bottom-right-radius: 1.3rem;
+   
+  }
+  .nft-d-text{
+    font-size: clamp(0.5rem, 1vw + 0.75rem, 2.2rem);
+  }
+  .nft-d-num{
+    font-size: clamp(0.5rem, 1vw + 0.6rem, 2.2rem);
+  }
+ 
+  .bg-image{
+    background-image:
+    linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #A259FF 100%),
+    url('./images/tablet.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    position: relative;
+  }
+  .mobile-highlight-heading h3{
+    font-size: var(--fs-400);
+  }
+
+  .artist-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+  }
+
+  .artist-row-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: rgba(59, 59, 59, 0.5);
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 1.3rem;
+    padding: 1.3rem;
+    height: fit-content;
+    max-width: 70%;
+    
+  }
+  .artistcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--size-200);
+    width: 9rem;
+    height: 2.8rem;
+    background-color: var(--clr-black);
+    border-radius: 1.3rem;
+  }
+  .artistcard p{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-200);
+  }
+  .artist-row-head{
+    font-size: var(--fs-200);
+    font-family: var(--ff-spacemono);
+   
+  }
+  .artist-times{
+    font-size: var(--fs-100);
+    font-family: var(--ff-spacemono);
+  }
+  .mobile-highlight-white-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--size-200);
+    padding: 1rem 2rem;
+    border-radius: 1.3rem;
+    background-color: var(--clr-white);
+    outline: none;
+    border: 0;
+    font-family: var(--ff-worksans);
+    color: var(--clr-black);
+    font-size: var(--size-300);
+    font-weight: var(--fw-bold);
+  }
+  .artist-row-head{
+    font-size: var(--fs-200);
+    font-family: var(--ff-spacemono);
+  }
+  .artist-times{
+    font-size: var(--fs-100);
+    font-family: var(--ff-spacemono);
+  }
+  .info-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.3rem;
+    background: var(--clr-light-black);
+    width: calc(100% - 20px);
+  }
+  
+  .info-card-desc h5{
+    font-size: clamp(0.9rem, 1vw + 0.5rem, 2.2rem);
+  }
+  .info-card-desc p{
+    font-size: clamp(0.5rem, 1vw + 0.5rem, 2.2rem);
+    font-family: var(--ff-worksans);
+  }
+  
+  .subscribe-widget-row{
+    
+    width: calc(100% - 70px);
+  }
+  .sub-w-head{
+    font-size: var(--fs-400);
+    font-family: var(--ff-worksans);
+    margin-top: var(--size-300);
+  }
+  .sub-w-subhead{
+    font-size: var(--fs-200);
+    font-family: var(--ff-worksans);
+    margin: 0;
+  }
+
+  
+  .subscribe-forms input {
+    background: #fff;
+    border: 1px solid #cbcbce;
+    border-radius: 3.25rem;
+    color: #3a3d4b;
+    border-radius: 0.8rem;
+    font-size: var(--fs-300);
+    font-family: var(--ff-worksans);
+    padding: 0.5rem;
+    outline: none;
+    text-align: left;
+    height: 3rem;
+  }
+  
+ .subscribe-forms .button {
+     
+    background:var(--clr-action-likeblue);
+    padding: 0.5rem;
+    border: none;
+    color: var(--clr-white);
+    border-radius: 0.8rem;
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-300);
+    width: 100%;
+    height: 3rem;
+  }
+  /* footer */
+
+  .footer-section{
+    background-color:var(--clr-light-black);
+    padding: 3rem;
+  }
+  .footer-subscribe-form form{
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-subscribe-form input {
+    background: #fff;
+    border: 1px solid #cbcbce;
+    border-radius: 0.8rem;
+    color: #3a3d4b;
+    font-size: var(--fs-200);
+    padding: 0.5rem;
+    outline: none;
+    text-align: left;
+    height: 3rem;
+  }
+  
+ .footer-subscribe-form .footer-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--size-200);
+    height: 3rem;
+    background:var(--clr-action-likeblue);
+    padding: 0.5rem;
+    border: none;
+    color: var(--clr-white);
+    border-radius: 0.8rem;
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-300);
+    margin-top: var(--size-300);
+  }   
+
+  /* marketplace section */
+
+  .marketplace-heading{
+    font-size: var(--fs-700);
+    font-family: var(--ff-worksans);
+  }
+  .marketplace-subheading{
+      font-size: var(--fs-300);
+      font-family: var(--ff-worksans);
+  }
+
+  .input-search{
+    border: 1px solid var(--clr-light-black);
+    border-radius: 1rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-white);
+    background-color: var(--btn-dark);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    width: 100%;
+    height: 3.5rem;
+    }
+  .search-button{
+    height: 3.5rem;
+  }
+  .search-container {
+    background-color: var(--clr-black);
+    border: 1px solid var(--clr-light-black);
+    position: relative;
+    border-radius: 1.3rem;
+    padding: 3px 50px 3px 10px;
+  }
+  .search-box {
+    background-color: transparent;
+    outline: none;
+    height: 35px;
+    font-size: 15px;
+    border: 0;
+    width: 100%;
+  }
+  .search-img {
+    position: absolute;
+    right: 2rem;
+    top: 1.2rem;
+    background-color: var(--clr-black);
+    border-radius: 50%;
+    border: 0;
+    color: #FFF;
+    width: 24px;
+    height: 24px;
+    outline: 0;
+  }
+  .marketplace-card{
+    background-color: var(--clr-black);
+    border-bottom-left-radius: 1.3rem;
+    border-bottom-right-radius: 1.3rem;
+  }
+  .content-head{
+    font-size: var(--fs-300);
+  }
+
+  /* nft-page section */
+
+  .Keemun_magic{
+    background-image: url('./images/marketplace/nft-page/Keemun_magic.png');
+    background-size: cover;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .nft-card{
+      background-color: var(--clr-light-black);
+      border-bottom-left-radius: 1.3rem;
+      border-bottom-right-radius: 1.3rem;
+  } 
+  .main-div-tags{
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    
+  }
+  .tags-div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 46px;
+      width: max-content;
+      padding: 0 1.5rem;
+      border-radius: 1.3rem;
+      background-color: var(--clr-light-black);
+      font-weight: var(--fw-bold);
+      font-family: var(--ff-worksans);
+      text-transform: uppercase;
+  }
+  .nft-row{ 
+      display: flex;
+      flex-direction: column;
+      background: rgba(59, 59, 59, 0.5);
+      max-width: 100%;
+      margin-left: auto;
+      border-radius: 1.3rem;
+      padding: 1.5rem;
+      margin-top: 2rem;
+  }
+  .auction-ands{
+      font-family: var(--ff-spacemono);
+      font-size: clamp(1rem, -0.098rem + 5.4902vw, 1.875rem);
+  }
+  .time{
+      font-size: clamp(0.75rem, -0.098rem + 4.4902vw, 1.875rem);
+      font-family: var(--ff-spacemono);
+      color: var(--clr-grey);
+  }
+
+  .nft-time span{
+    font-size: clamp(1.2rem, -2.451rem + 17.2549vw, 3.75rem);
+    font-family: var(--ff-spacemono);
+    
+  }
+  .nft-last-time{
+    font-size: clamp(1.2rem, -2.451rem + 17.2549vw, 3.75rem);
+    font-family: var(--ff-spacemono);
+  }
+  .nft-button{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      width: 100%;
+      padding: 0.6rem;
+      background:var(--clr-action-likeblue);
+      border: none;
+      color: var(--clr-white);
+      border-radius: 0.8rem;
+      font-family: var(--ff-worksans);
+      font-size: clamp(1rem, -0.098rem + 5.4902vw, 1.875rem);
+      margin-top: 0.5rem;
+  }
+  .nftpage-button-dark {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nft-dark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--clr-action-likeblue);
+    border-radius: var(--size-btn);
+    padding: 1rem 2rem;
+    font-weight: var(--fw-bold);
+    font-size: clamp(1rem, -0.098rem + 5.4902vw, 1.875rem);
+    color: var(--clr-white);
+    background-color: var(--btn-dark);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    width: 100%;
+  }
+  .nftpage-heading{
+    font-size: var(--fs-600);
+    font-family: var(--ff-worksans);
+  }
+
+  /* ranking section */
+
+  .rankings-menu .nav-link{
+    font-size: clamp(0.5rem, -0.1275rem + 3.1373vw, 1rem);
+  }
+  .rankings-heading{
+    font-size: var(--fs-700);
+    font-family: var(--ff-worksans);
+  }
+  .rankings-subheading{
+    font-size: var(--fs-300);
+    font-family: var(--ff-worksans);
+  }
+
+  .rankings-top-head{
+    padding: 1rem;
+    border: 1px solid var(--clr-light-black);
+    border-radius: 20px;
+    font-family: var(--ff-spacemono);
+    color: var(--clr-grey);
+  
+  }
+  .rankings-card{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--clr-light-black);
+    border-radius: 20px;
+  }
+  .table-header-1{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 0;
+  }
+  .table-header-1 span{
+    font-size: var(--fs-200);
+  }  
+  .table-header-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .table-header-2 span{
+    font-size: var(--fs-200);
+  }    
+  .table-header-top span{
+    font-size: var(--fs-200);
+    text-align: end;
+  }
+  .avatar{
+    width: 30px;
+    height: 30px;
+    margin-left: 0.5rem;
+  }
+  .rounded-number{
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 1.3rem;
+    font-family: var(--ff-spacemono);
+    font-size: var(--fs-200);
+    color: var(--clr-grey);
+  }
+  .avatar-text{
+    font-size: clamp(0.6rem, -0.1275rem + 3.1373vw, 1rem);
+    font-weight: var(--fw-semi-bold);
+    padding-left: 0.5rem;
+  }
+  .txt-color{
+    color: #00AC4F;
+    font-size: var(--fs-200);
+  }
+  .nft-sold{
+    font-size: var(--fs-200);
+    font-family: var(--ff-spacemono);
+  }
+  .nft-volume{
+    font-size: clamp(0.5rem, -0.1275rem + 3.1373vw, 1rem);
+    font-family: var(--ff-spacemono);
+    text-align: end; 
+  }  
+
+    /* artist page */
+
+  .maindiv-bg{
+    position: relative;
+  }
+  .virtual_world{
+    background: linear-gradient(180deg, rgba(151, 71, 255, 0) 21.88%, #9747FF 95.31%),
+    url('./images/artistpage/bg.png');
+    height: 320px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0;
+    bottom:0;
+    left:0;
+    right: 0;
+  }
+  .container-avatar{
+    position: absolute;
+    top: 250px;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+      
+  }
+  .pg-avatar{
+    background-image: url('./images/artistpage/page-avatar.png');
+    background-repeat: no-repeat;
+    height:150px; 
+    width: 120px;
+  }
+  .main-container{
+    position: absolute;
+    top: 450px;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+  }
+  .artistpage-heading{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-600);
+  }
+  .stats{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+      
+  }
+  .stats h4{
+    font-family: var(--ff-spacemono);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-500);
+  }
+  .stats span{
+    font-family: var(--ff-worksans);
+    font-size:var(--fs-300);
+    font-weight: 400;
+  }
+  .artist-bio{
+    margin-top: 1rem;
+  }
+  .artist-bio span{
+    font-family: var(--ff-spacemono);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-300);
+    color: var(--clr-grey);
+  }
+  .artist-bio p{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-300);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+  }
+  .artist-links{
+    font-family: var(--ff-spacemono);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-300);
+    color: var(--clr-grey);
+  }
+  .links{
+    display: flex;
+    gap: 0.5rem;   
+  }
+  .links a{
+    transition: all 0.5s ease-out;
+  }
+  .links a:hover,
+  .links a::before{
+    transform: scale(0.8);
+  }
+ 
+  .artistpage_buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .artist-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background:var(--clr-action-likeblue);
+    padding: 1.2rem 0.7rem;
+    border: none;
+    color: var(--clr-white);
+    border-radius: 0.8rem;
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-300);
+    height: 3rem;
+    text-decoration: none;
+    width: 100%;
+  }
+   .button-dark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--clr-action-likeblue);
+    border-radius: 0.8rem;
+    padding: 1rem 1.3rem;
+    font-weight: var(--fw-bold);
+    font-size: var(--size-300);
+    color: var(--clr-white);
+    background-color: var(--btn-dark);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    height: 3rem;
+    text-decoration: none;
+    width: 100%;
+   }
+
+   .card-containers-head{
+    position: relative;
+    top: 480px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+   }
+   .card-containers{
+    position: relative;
+    top:481px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: var(--clr-light-black);
+    padding: 1rem;
+      
+   }
+   .main-footer{
+    background-color:var(--clr-light-black);
+    padding: 3rem;
+    position: relative;
+    top: 481px;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+      
+  }
+  /* sign-up section */
+
+  .sign-column {
+    padding: 40px 20px;
+  }
+  
+  .sign-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .sign-p{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-400);
+    text-align: center;
+  }
+  .sign-h1{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-800);
+    text-align: center;
+  }
+  .input-div{
+    width: 80%;
+  }
+  .button{
+    background:var(--clr-action-likeblue);
+    padding: 0.5rem;
+    border: none;
+    color: var(--clr-white);
+    border-radius: var(--size-500);
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-200);
+    height: 3rem;
+  }
+  .sign-input-span{
+    background-color: white;
+    border-radius: var(--size-500);
+    height: 3rem;
+    border: 0;
+  }
+
+  .form-control{
+    border: none;
+    outline: none;
+    border-radius: var(--size-500);
+    height: 3rem;
+  }
+  /* wallet section */
+
+  .sign-column {
+    padding: 40px 20px;
+  }
+  
+  .sign-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .sign-p{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-400);
+    text-align: center;
+  }
+  .sign-h1{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-800);
+    text-align: center;
+  }
+  
+  .wallet-button-dark .button-wallet{
+    border: 1px solid var(--clr-action-likeblue);
+    border-radius: var(--size-btn);
+    padding: 1rem 2rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-white);
+    background-color: var(--btn-dark);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    width: 80%;
+  }
+  .button-wallet span{
+    font-size: clamp(0.5rem, -0.098rem + 4.0002vw, 1.875rem);
+  }
+
+}
+  
+  @media only screen and (min-width: 576px) and (max-width: 767px){
+  .navbar-brand{
+    width: 200px;
+  }
+   
+  .navbar .navbar-nav .nav-item .nav-link{
+    font-size: 1rem;
+    text-decoration: none;
+    color:var(--clr-white);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-worksans);
+  }
+  
+  .btn{
+    border: 0;
+    border-radius: var(--size-btn);
+    color: var(--clr-white);
+    background-color: var(--btn-primary);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    padding: 1rem 2rem;
+  }
+  .btn:hover{
+    background-color: var(--clr-action-likeblue);
+  }
+
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+  .fs-primary-heading{
+    font-size: var(--fs-500);
+  }
+  .d-walking{
+    font-size: var(--fs-300);
+    font-family: var(--ff-worksans);
+  }
+  .btn{
+    border: 0;
+    border-radius: var(--size-btn);
+    color: var(--clr-white);
+    background-color: var(--btn-primary);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    padding: 0.75rem 1.5rem;
+  }
+  .amounts h4{
+    font-family: var(--ff-spacemono);
+    font-size: var(--fs-400);
+  }
+  .amounts span{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-200);
+  }
+   
+  
+  .spacewolking-direction-1 img{
+  width: 100%;
+  max-height: 20rem;
+  }
+  .spacewolking-direction-2{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--clr-light-black);
+    font-weight: var(--fw-semi-bold);
+    padding: 1rem;
+    width: 100%;
+    
+
+  }
+  .spacewolking-direction-2 .icon-size{
+    width: 24px;
+    height: 24px;
+  }
+
+
+  .spacewolking-direction-2 h2{
+    font-size: var(--fs-300);
+    font-family: var(--ff-worksans);
+   
+  }
+  .spacewolking-direction-2 span{
+    font-size: var(--fs-200);
+    font-family: var(--ff-worksans);
+  }
+
+  .fs-secondary-heading{
+    font-size: var(--fs-400);
+    font-family: var(--ff-worksans);
+  }
+  .tc-img{
+    width: 96%;
+  }
+  .t-collection{
+    font-size: var(--fs-200);
+    font-family: var(--ff-worksans);
+  }
+  .t-collection-head{
+    font-size: var(--size-300);
+    font-family: var(--ff-worksans);
+  }
+  .t-collection-d{
+    font-size: var(--size-200);
+    font-family: var(--ff-worksans);
+  }
+  .top-head{
+    font-size: var(--size-300);
+    font-family: var(--ff-worksans);
+  }
+  .section-button-dark .button-dark{
+    border: 1px solid var(--clr-action-likeblue);
+    border-radius: var(--size-btn);
+    padding: 0.5rem 1rem;
+    font-weight: var(--fw-bold);
+    font-size: var(--size-300);
+    color: var(--clr-white);
+    background-color: var(--btn-dark);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+  }
+  .card{
+    background-color: var(--clr-light-black);
+  }
+ 
+  .rounded-numbers{
+    top: 15%;
+    right: 90%;
+    color: var(--clr-grey);
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 1.3rem;
+    font-family: var(--ff-spacemono);
+    font-size: var(--fs-200);
+  }
+  .category-head{
+    
+    font-size: var(--size-400);
+    color: var(--clr-white);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-worksans);
+   
+  }
+  .category-body-1{
+    font-size: var(--fs-200);
+    font-family: var(--ff-worksans);
+  }
+  .category-body-2{
+    font-size: var(--fs-200);
+    font-family: var(--ff-spacemono);
+  }
+  .category-card h5{
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: var(--clr-light-black);
+    font-size: var(--fs-200);
+    font-weight: var(--fw-semi-bold);
+    font-family: var(--ff-worksans);
+    padding: 1.1rem;
+   
+  }
+  
+  .card-row-box{
+    background-color: var(--clr-light-black);
+    border-bottom-left-radius: 1.3rem;
+    border-bottom-right-radius: 1.3rem;
+   
+  }
+  .nft-d-text{
+    font-size: var(--fs-200);
+  }
+  .nft-d-num{
+    font-size: var(--fs-200);
+  }
+  
+  .bg-image{
+    background-image:
+    linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #A259FF 100%),
+    url('./images/tablet.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    position: relative;
+  }
+  .mobile-highlight-heading h3{
+    font-size: var(--fs-400);
+  }
+
+  .artist-row{
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    
+  }
+
+  .artist-row-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgba(59, 59, 59, 0.5);
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 1.3rem;
+    padding: 1.3rem;
+    height: fit-content;
+    
+  }
+  .artistcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--size-200);
+    width: 9rem;
+    height: 2.8rem;
+    background-color: var(--clr-black);
+    border-radius: 1.3rem;
+  }
+  .artistcard p{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-200);
+  }
+  .artist-row-head{
+    font-size: var(--fs-200);
+    font-family: var(--ff-spacemono);
+   
+  }
+  .artist-times{
+    font-size: var(--fs-100);
+    font-family: var(--ff-spacemono);
+  }
+  .mobile-highlight-white-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--size-200);
+    padding: 1rem 2rem;
+    border-radius: 1.3rem;
+    background-color: var(--clr-white);
+    outline: none;
+    border: 0;
+    font-family: var(--ff-worksans);
+    color: var(--clr-black);
+    font-size: var(--size-300);
+    font-weight: var(--fw-bold);
+  }
+  .info-card{
+    border-radius: 1.3rem;
+    background: var(--clr-light-black);
+    height: 20rem;
+    width: 32%;
+  }
+  
+  .info-card-desc h5{
+    font-size: var(--fs-300);
+  }
+  .info-card-desc p{
+    font-size: var(--fs-200);
+    font-family: var(--ff-worksans);
+  }
+  .subscribe-widget-row{
+    border-radius: 1.3rem;
+    background-color: var(--clr-light-black);
+    padding: 2.5rem 2.5rem;
+    
+  }
+  .sub-w-head{
+    font-size: var(--fs-400);
+    font-family: var(--ff-worksans);
+  }
+  .sub-w-subhead{
+    font-size: var(--fs-200);
+    font-family: var(--ff-worksans);
+    margin: 0;
+  }
+
+ 
+  
+  .subscribe-forms input {
+    background: #fff;
+    border: 1px solid #cbcbce;
+    border-radius: 3.25rem;
+    color: #3a3d4b;
+    border-radius: 0.8rem;
+    font-size: var(--fs-200);
+    font-family: var(--ff-worksans);
+    padding: 0.5rem;
+    outline: none;
+    text-align: left;
+   
+  }
+  
+ .subscribe-forms .button {
+     
+    background:var(--clr-action-likeblue);
+    padding: 0.5rem;
+    border: none;
+    color: var(--clr-white);
+    border-radius: 0.8rem;
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-200);
+    width: 100%;
+  }
+  /* footer */
+
+  .footer-section{
+    background-color: var(--clr-light-black);
+    padding: 4rem;
+  }
+  .footer-logo{
+    width: clamp(min(100px),80%,max(250px));
+  }
+  
+  
+  .footer-subscribe-form input {
+    background: #fff;
+    border: 1px solid #cbcbce;
+    border-radius: 1rem;
+    color: #3a3d4b;
+    font-size: var(--fs-300);
+    padding: 0.5rem;
+    outline: none;
+    text-align: left;
+    position: absolute;
+    height: 3.25rem;
+    width: 40%;
+  }
+  
+ .footer-subscribe-form .footer-button {
+    position: relative;
+    height: 3.25rem;
+    background:var(--clr-action-likeblue);
+    padding: 0.5rem;
+    border: none;
+    color: var(--clr-white);
+    border-radius: 1rem;
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-300);
+    width: 30%;
+    left: 40%;
+  }   
+
+  /* marketplace section */
+
+  .marketplace-heading{
+    font-size: var(--fs-700);
+    font-family: var(--ff-worksans);
+  }
+  .marketplace-subheading{
+    font-size: var(--fs-300);
+    font-family: var(--ff-worksans);
+  }
+
+  .input-search{
+    border: 1px solid var(--clr-light-black);
+    border-radius: 1rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-white);
+    background-color: var(--btn-dark);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    width: 100%;
+    height: 3.5rem;
+  }
+  .search-button{
+    height: 3.5rem;
+  }
+  .search-container {
+    background-color: var(--clr-black);
+    border: 1px solid var(--clr-light-black);
+    position: relative;
+    border-radius: 1.3rem;
+    padding: 3px 50px 3px 10px;
+  }
+  .search-box {
+    background-color: transparent;
+    outline: none;
+    height: 35px;
+    font-size: 15px;
+    border: 0;
+    width: 100%;
+  }
+  .search-img {
+    position: absolute;
+    right: 2rem;
+    top: 1.2rem;
+    background-color: var(--clr-black);
+    border-radius: 50%;
+    border: 0;
+    color: #FFF;
+    width: 24px;
+    height: 24px;
+    outline: 0;
+  }
+  .marketplace-card{
+    background-color: var(--clr-black);
+    border-bottom-left-radius: 1.3rem;
+    border-bottom-right-radius: 1.3rem;
+  }
+  .content-head{
+    font-size: var(--fs-300);
+  }
+  
+  /* nft-page section */
+
+  .Keemun_magic{
+    background-image: url('./images/marketplace/nft-page/Keemun_magic.png');
+    background-size: cover;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .nft-card{
+    background-color: var(--clr-light-black);
+    border-bottom-left-radius: 1.3rem;
+    border-bottom-right-radius: 1.3rem;
+  } 
+  .main-div-tags{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    
+  }
+  .tags-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 46px;
+    width: max-content;
+    padding: 0 1.5rem;
+    border-radius: 1.3rem;
+    background-color: var(--clr-light-black);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-worksans);
+    text-transform: uppercase;
+  }
+  .nft-row{ 
+    display: flex;
+    flex-direction: column;
+    background: rgba(59, 59, 59, 0.5);
+    max-width: 100%;
+    margin-left: auto;
+    border-radius: 1.3rem;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  .auction-ands{
+    font-family: var(--ff-spacemono);
+    font-size: clamp(1rem, -0.098rem + 5.4902vw, 1.875rem);
+  }
+  .time{
+    font-size: clamp(0.75rem, -0.098rem + 4.4902vw, 1.875rem);
+    font-family: var(--ff-spacemono);
+    color: var(--clr-grey);
+  }
+
+  .nft-time span{
+    font-size: var(--fs-800);
+    font-family: var(--ff-spacemono);
+  }
+  .nft-last-time{
+    font-size: var(--fs-800);
+    font-family: var(--ff-spacemono);
+  }
+  .nftpage-button-dark {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nft-dark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--clr-action-likeblue);
+    border-radius: var(--size-btn);
+    padding: 1rem 2rem;
+    font-weight: var(--fw-bold);
+    font-size: clamp(1.5rem, -1.6387rem + 7.3298vw, 1.875rem);
+    color: var(--clr-white);
+    background-color: var(--btn-dark);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    width: 100%;
+  }
+  .nft-button{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    padding: 0.6rem;
+    background:var(--clr-action-likeblue);
+    border: none;
+    color: var(--clr-white);
+    border-radius: 0.8rem;
+    font-family: var(--ff-worksans);
+    font-size: clamp(1rem, -0.098rem + 5.4902vw, 1.875rem);
+    margin-top: 0.5rem;
+  }   
+    /* ranking section */
+  .rankings-heading{
+    font-size: var(--fs-700);
+    font-family: var(--ff-worksans);
+  }
+  .rankings-subheading{
+    font-size: var(--fs-300);
+    font-family: var(--ff-worksans);
+  }
+
+  .rankings-top-head{
+    padding: 1rem;
+    border: 1px solid var(--clr-light-black);
+    border-radius: 20px;
+    font-family: var(--ff-spacemono);
+    color: var(--clr-grey);
+  }
+  .rankings-card{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--clr-light-black);
+    border-radius: 20px;
+  }
+  .table-header-1{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding: 0;
+  }
+  .table-header-1 span{
+    font-size: var(--fs-200);
+  }  
+  .table-header-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .table-header-2 span{
+    font-size: var(--fs-200);
+  } 
+  .table-header-top span{
+    font-size: var(--fs-200);
+  }   
+  .avatar{
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+  }
+  .rounded-number{
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 1.3rem;
+    font-family: var(--ff-spacemono);
+    font-size: var(--fs-200);
+    color: var(--clr-grey);
+    margin-left: 15px;
+  }
+  .avatar-text{
+    font-size: clamp(0.6rem, -2.0135rem + 2.278vw, 1.875rem);
+    font-weight: var(--fw-semi-bold);
+    padding-left: 0.5rem;
+  }
+  .txt-color{
+    color: #00AC4F;
+    font-size: var(--fs-200);
+  }
+  .nft-sold{
+    font-size: var(--fs-200);
+    font-family: var(--ff-spacemono);
+  }
+  .nft-volume{
+    font-size: var(--fs-200);
+    font-family: var(--ff-spacemono);
+  }  
+
+  /* artist page */
+
+  .maindiv-bg{
+    position: relative;
+  }
+  .virtual_world{
+    background: linear-gradient(180deg, rgba(151, 71, 255, 0) 21.88%, #9747FF 95.31%),
+    url('./images/artistpage/bg.png');
+    height: 320px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0;
+    bottom:0;
+    left:0;
+    right: 0;
+  }
+  .container-avatar{
+    position: absolute;
+    top: 250px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .pg-avatar{
+    background-image: url('./images/artistpage/page-avatar.png');
+    background-repeat: no-repeat;
+    height:150px; 
+  }
+  .main-container{
+    position: absolute;
+    top: 450px;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+  }
+  .artistpage-heading{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-500);
+  }
+  .stats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .stats h4{
+    font-family: var(--ff-spacemono);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-400);
+  }
+  .stats span{
+    font-family: var(--ff-worksans);
+    font-size:var(--fs-300);
+    font-weight: 400;
+  }
+  .artist-bio{
+    margin-top: 1rem;
+  }
+  .artist-bio span{
+    font-family: var(--ff-spacemono);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-300);
+    color: var(--clr-grey);
+  }
+  .artist-bio p{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-300);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+  }
+  .artist-links{
+    font-family: var(--ff-spacemono);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-300);
+    color: var(--clr-grey);
+  }
+  .links{
+    display: flex;
+    gap: 0.5rem;
+  }
+  .links a{
+    transition: all 0.5s ease-out;
+  }
+  .links a:hover,
+  .links a::before{
+    transform: scale(0.8);
+  }
+
+  .artistpage_buttons{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .artist-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background:var(--clr-action-likeblue);
+    padding: 1.2rem 0.7rem;
+    border: none;
+    color: var(--clr-white);
+    border-radius: 0.8rem;
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-300);
+    height: 3rem;
+    text-decoration: none
+  }
+  .button-dark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--clr-action-likeblue);
+    border-radius: 0.8rem;
+    padding: 1rem 1.3rem;
+    font-weight: var(--fw-bold);
+    font-size: var(--size-300);
+    color: var(--clr-white);
+    background-color: var(--btn-dark);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    height: 3rem;
+    text-decoration: none;
+  }
+
+  .card-containers-head{
+    position: relative;
+    top: 400px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+  .card-containers{
+    position: relative;
+    top:400px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: var(--clr-light-black);
+    padding: 3rem;
+  }
+  .main-footer{
+    background-color:var(--clr-light-black);
+    padding: 3rem;
+    position: relative;
+    top: 401px;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+  }
+
+  /* sign-up section */
+
+  .sign-column {
+    padding: 40px 20px;
+  }
+  
+  .sign-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .sign-p{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-500);
+    text-align: center;
+  }
+  .sign-h1{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-900);
+    text-align: center;
+  }
+  .input-div{
+    width: 80%;
+  }
+  .button{
+    background:var(--clr-action-likeblue);
+    padding: 0.5rem;
+    border: none;
+    color: var(--clr-white);
+    border-radius: var(--size-500);
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-200);
+    height: 3rem;
+  }
+  .sign-input-span{
+    background-color: white;
+    border-radius: var(--size-500);
+    height: 3rem;
+    border: 0;
+  }
+
+  .form-control{
+    border: none;
+    outline: none;
+    border-radius: var(--size-500);
+    height: 3rem;
+  }
+
+  /* wallet section */
+
+
+  .sign-column {
+    padding: 40px 20px;
+  }
+  
+  .sign-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .sign-p{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-400);
+    text-align: center;
+  }
+  .sign-h1{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-800);
+    text-align: center;
+  }
+  
+
+  .wallet-button-dark .button-wallet{
+    border: 1px solid var(--clr-action-likeblue);
+    border-radius: var(--size-btn);
+    padding: 1rem 2rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-white);
+    background-color: var(--btn-dark);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    width: 60%;
+  }
+  .button-wallet span{
+    font-size: clamp(0.5rem, -0.098rem + 4.0002vw, 1.875rem);
+  }
+
+}
+
+  @media only screen and (min-width: 768px) and (max-width: 991px){
+    .navbar-brand{
+      width: 250px;
+    }
+    
+    .navbar .navbar-nav {
+     list-style: none;
+    }
+  
+    .navbar .navbar-nav .nav-item .nav-link{
+      font-size: 1rem;
+      text-decoration: none;
+      color:var(--clr-white);
+      font-weight: var(--fw-bold);
+      font-family: var(--ff-worksans);
+    }
+  
+    .btn{
+      border: 0;
+      border-radius: var(--size-btn);
+      color: var(--clr-white);
+      background-color: var(--btn-primary);
+      font-family: var(--ff-worksans);
+      cursor: pointer;
+      padding: 1rem 2rem;
+    }
+     
+    .btn:hover{
+      background-color: var(--clr-action-likeblue);
+    }
+    .navbar-toggler:focus,
+    .navbar-toggler:active,
+    .navbar-toggler-icon:focus {
+      outline: none;
+      box-shadow: none;
+      border: none;
+    }
+    .d-walking{
+      font-size: var(--fs-400);
+      font-family: var(--ff-worksans);
+    }
+    
+    .amounts h4{
+       font-family: var(--ff-spacemono);
+       font-size: var(--fs-500);
+    }
+    .amounts span{
+      font-family: var(--ff-worksans);
+       font-size: var(--fs-300);
+    }
+    .rounded-numbers{
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 1.3rem;
+      font-family: var(--ff-spacemono);
+      top: 2%;
+      right: 85%;
+      font-size: var(--fs-200);
+      color: var(--clr-grey);
+    }
+    
+    .spacewolking-direction-1 img{
+      width: 100%;
+      max-height: 20rem;
+    }
+
+    .spacewolking-direction-2{
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      background-color: var(--clr-light-black);
+      font-weight: var(--fw-semi-bold);
+      padding: 1rem;
+      width: 100%;
+      
+  
+    }
+    .spacewolking-direction-2 .icon-size{
+      width: 24px;
+      height: 24px;
+    }
+  
+    .spacewolking-direction-2 h2{
+      font-size: var(--fs-300);
+      font-family: var(--ff-worksans);
+     
+    }
+   
+    .spacewolking-direction-2 span{
+      font-size: var(--fs-200);
+      font-family: var(--ff-worksans);
+    }
+  
+    
+    .fs-secondary-heading{
+      font-size: var(--fs-600);
+      font-family: var(--ff-worksans);
+    }
+    .tc-img{
+      width: 96%;
+    }
+    .t-collection-head{
+      font-size: var(--size-400);
+      font-family: var(--ff-worksans);
+    }
+    .t-collection-d{
+      font-size: var(--size-300);
+      font-family: var(--ff-worksans);
+    }
+   
+    .top-head{
+      font-size: var(--size-400);
+      font-family: var(--ff-worksans);
+    }
+    .card{
+      background-color: var(--clr-light-black);
+
+    }
+    .avatar-img {
+      width: 60%;
+    }
+   
+    
+    .category-head{
+      text-align: center;
+      font-size: var(--fs-200);
+      font-weight: var(--fw-bold);
+      font-family: var(--ff-worksans);
+      line-height: 1;
+      color: var(--clr-white);
+    }
+    .category-body-1{
+      font-size: var(--fs-100);
+      font-family: var(--ff-worksans);
+    }
+    .category-body-2{
+      font-size: var(--fs-100);
+      font-family: var(--ff-spacemono);
+    }
+    .category-card h5{
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+      background-color: var(--clr-light-black);
+      font-size: var(--fs-200);
+      font-weight: var(--fw-semi-bold);
+      font-family: var(--ff-worksans);
+      padding: 1.1em;
+    }
+    .card-row-box{
+      background-color: var(--clr-light-black);
+      border-bottom-left-radius: 1.3rem;
+      border-bottom-right-radius: 1.3rem;
+     
+    }
+    .nft-d-text{
+      font-size: var(--fs-200);
+    }
+    .nft-d-num{
+      font-size: var(--fs-200);
+    }
+    .bg-image{
+      background-image: url('images/dekstop.png');
+      background-position: center;
+      height:500px;
+      background-size:cover;
+    }
+    .artistcard{
+      width: 9rem;
+      height: 2.8rem;
+      background-color: var(--clr-black);
+      border-radius: 1.3rem;
+    }
+    .artistcard p{
+      font-family: var(--ff-worksans);
+      font-size: var(--fs-200);
+    }
+    .bg-image{
+      background-image: url('images/tablet.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 500px;
+  
+    }
+    .mobile-highlight-heading h3{
+      font-size: var(--fs-400);
+    }
+   
+    .artist-row{
+      max-width: 500px;
+    }
+    .artist-row-2{
+      background: rgba(59, 59, 59, 0.5);
+      backdrop-filter: blur(5px);
+      /* Note: backdrop-filter has minimal browser support */
+      max-width: 500px;
+      border-radius: 1.3rem;
+      padding: 1.875rem;
+    }
+    .artist-row-head{
+      font-size: var(--fs-200);
+      font-family: var(--ff-spacemono);
+    }
+    .artist-times{
+      font-size: var(--fs-100);
+      font-family: var(--ff-spacemono);
+    }
+    .info-card{
+      border-radius: 1.3rem;
+      background: var(--clr-light-black);
+      height: 20rem;
+      width: 32%;
+    }
+    .info-card-desc h5{
+      font-size: var(--fs-300);
+    }
+    .info-card-desc p{
+      font-size: var(--fs-200);
+      font-family: var(--ff-worksans);
+    }
+
+    .subscribe-widget-row{
+      border-radius: 1.3rem;
+      background-color: var(--clr-light-black);
+      padding: 2.5rem 2.5rem;
+      
+    }
+    .sub-w-head{
+      font-size: var(--fs-500);
+      font-family: var(--ff-worksans);
+    }
+    .sub-w-subhead{
+      font-size: var(--fs-300);
+      font-family: var(--ff-worksans);
+      margin: 0;
+    }
+  
+    .subscribe-form input::placeholder{
+      color: #2B2B2B;
+      font-size: 1em;
+      font-family: var(--ff-worksans);
+    
+    } 
+    
+    
+    .subscribe-forms input {
+      background: #fff;
+      border: 1px solid #cbcbce;
+      border-radius: 3.25rem;
+      color: #3a3d4b;
+      border-radius: 0.8rem;
+      font-size: var(--fs-200);
+      padding: 0.5rem;
+      outline: none;
+      text-align: left;
+      position: absolute;
+     
+    }
+    
+   .subscribe-forms .button {
+      position: relative;
+      background:var(--clr-action-likeblue);
+      padding: 0.5rem;
+      border: none;
+      color: var(--clr-white);
+      border-radius: 0.8rem;
+      font-family: var(--ff-worksans);
+      font-size: var(--fs-200);
+      width: 50%;
+      transform: translateY(-8px);
+      left: 50%;
+    
+    }
+    .footer-section{
+      padding: 4rem;
+      background-color: var(--clr-light-black);
+    }
+    .footer-logo{
+      width: clamp(min(100px),80%,max(250px));
+    }
+    .footer-head {
+      font-size: var(--fs-200);
+    }
+    
+    .footer-subscribe-form input {
+      background: #fff;
+      border: 1px solid #cbcbce;
+      border-radius: 1rem;
+      color: #3a3d4b;
+      font-size: var(--fs-200);
+      padding: 0.5rem;
+      outline: none;
+      text-align: left;
+      position: absolute;
+      height: 3.25rem;
+      width: 25%;
+    }
+    
+   .footer-subscribe-form .footer-button {
+      position: relative;
+      height: 3.25rem;
+      background:var(--clr-action-likeblue);
+      padding: 0.5rem;
+      border: none;
+      color: var(--clr-white);
+      border-radius: 1rem;
+      font-family: var(--ff-worksans);
+      font-size: var(--fs-200);
+      width: 40%;
+      left: 60%;
+    }   
+    /* marketplace section */
+    
+    .marketplace-heading{
+      font-size: var(--fs-700);
+      font-family: var(--ff-worksans);
+    }
+    .marketplace-subheading{
+        font-size: var(--fs-300);
+        font-family: var(--ff-worksans);
+    }
+  
+    .input-search{
+      border: 1px solid var(--clr-light-black);
+      border-radius: 1rem;
+      font-weight: var(--fw-bold);
+      color: var(--clr-white);
+      background-color: var(--btn-dark);
+      font-family: var(--ff-worksans);
+      cursor: pointer;
+      width: 100%;
+      height: 3.5rem;
+    }
+    .search-button{
+      height: 3.5rem;
+    }
+    .search-container {
+      background-color: var(--clr-black);
+      border: 1px solid var(--clr-light-black);
+      position: relative;
+      border-radius: 1.3rem;
+      padding: 3px 50px 3px 10px;
+    }
+    .search-box {
+      background-color: transparent;
+      outline: none;
+      height: 35px;
+      font-size: 15px;
+      border: 0;
+      width: 100%;
+    }
+    .search-img {
+      position: absolute;
+      right: 2rem;
+      top: 1.2rem;
+      background-color: var(--clr-black);
+      border-radius: 50%;
+      border: 0;
+      color: #FFF;
+      width: 24px;
+      height: 24px;
+      outline: 0;
+    }
+    .marketplace-card{
+      background-color: var(--clr-black);
+      border-bottom-left-radius: 1.3rem;
+      border-bottom-right-radius: 1.3rem;
+    }
+    .content-head{
+      font-size: var(--fs-200);
+    }
+
+    /* nft-page section */
+
+    .Keemun_magic{
+      background-image: url('./images/marketplace/nft-page/Keemun_magic.png');
+      background-size: cover;
+      height: 500px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .nft-card{
+      background-color: var(--clr-light-black);
+      border-bottom-left-radius: 1.3rem;
+      border-bottom-right-radius: 1.3rem;
+    } 
+    .main-div-tags{
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .tags-div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 46px;
+      width: auto;
+      padding: 0 1.5rem;
+      border-radius: 1.3rem;
+      background-color: var(--clr-light-black);
+      font-weight: var(--fw-bold);
+      font-family: var(--ff-worksans);
+      text-transform: uppercase;
+    }
+    .nft-row{ 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items:center;
+      background: rgba(59, 59, 59, 0.5);
+      max-width: 250px;
+      margin-left: auto;
+      border-radius: 1.3rem;
+      padding: 1.5rem;
+    }
+    .auction-ands{
+      font-family: var(--ff-spacemono);
+      font-size: var(--fs-200);
+    }
+    .time{
+      font-size: var(--fs-200);
+      font-family: var(--ff-spacemono);
+      color: var(--clr-grey);
+    }
+  
+    .nft-time span{
+      font-size: var(--fs-400);
+      font-family: var(--ff-spacemono);
+    }
+    .nft-last-time{
+      font-size: var(--fs-400);
+      font-family: var(--ff-spacemono);
+      padding: 0;
+    }
+    .nftpage-button-dark {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .nft-dark{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      border: 1px solid var(--clr-action-likeblue);
+      border-radius: var(--size-btn);
+      padding: 1rem 2rem;
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-200);
+      color: var(--clr-white);
+      background-color: var(--btn-dark);
+      font-family: var(--ff-worksans);
+      cursor: pointer;
+      width: auto;
+    }
+    .nft-button{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      width: 100%;
+      padding: 0.5rem;
+      background:var(--clr-action-likeblue);
+      border: none;
+      color: var(--clr-white);
+      border-radius: 0.8rem;
+      font-family: var(--ff-worksans);
+      font-size: var(--fs-200);
+        margin-top: 0.5rem;
+    }
+
+   /* ranking section */
+
+    .rankings-heading{
+      font-size: var(--fs-700);
+      font-family: var(--ff-worksans);
+    }
+    .rankings-subheading{
+      font-size: var(--fs-300);
+      font-family: var(--ff-worksans);
+    }
+
+    .rankings-top-head{
+      padding: 1rem;
+      border: 1px solid var(--clr-light-black);
+      border-radius: 20px;
+      font-family: var(--ff-spacemono);
+      color: var(--clr-grey);
+    }
+    .rankings-card{
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: var(--clr-light-black);
+      border-radius: 20px;
+    }
+    .table-header-1{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      
+    } 
+    .table-header-2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .avatar{
+      width: 50px;
+      height: 50px;
+      margin-left: 10px;
+    }
+ 
+    .rounded-number{
+      display: block;
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 1.3rem;
+      font-family: var(--ff-spacemono);
+      background-color: var(--clr-black);
+      font-size: var(--fs-200);
+      color: var(--clr-grey);
+      margin-left: 5px;
+    }
+    .avatar-text{
+      font-size: clamp(0.8rem, -2.0135rem + 2.278vw, 1.875rem);
+      font-weight: var(--fw-semi-bold);
+      padding-left: 1rem;
+    }
+    .txt-color{
+      color: #00AC4F;
+    }
+    .nft-sold{
+    font-size: var(--fs-300);
+    font-family: var(--ff-spacemono);
+    }
+    .nft-volume{
+    font-size: var(--fs-300);
+    font-family: var(--ff-spacemono);
+    }  
+
+  /* artist page */
+
+    .maindiv-bg{
+      position: relative;
+    }
+    .virtual_world{
+      background: linear-gradient(180deg, rgba(151, 71, 255, 0) 21.88%, #9747FF 95.31%),
+      url('./images/artistpage/bg.png');
+      height: 320px;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      top: 0;
+      bottom:0;
+      left:0;
+      right: 0;
+    }
+    .container-avatar{
+      position: absolute;
+      top: 250px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    .pg-avatar{
+      background-image: url('./images/artistpage/page-avatar.png');
+      background-repeat: no-repeat;
+      height:150px; 
+    }
+    .main-container{
+      position: absolute;
+      top: 500px;
+      left: 0px;
+      right: 0px;
+      bottom: 0;
+    }
+    .artistpage-heading{
+      font-family: var(--ff-worksans);
+    }
+    .stats{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .stats h4{
+      font-family: var(--ff-spacemono);
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-500);
+    }
+    .stats span{
+      font-family: var(--ff-worksans);
+      font-size:var(--fs-400);
+      font-weight: 400;
+    }
+    .artist-bio{
+      margin-top: 1rem;
+    }
+    .artist-bio span{
+      font-family: var(--ff-spacemono);
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-400);
+      color: var(--clr-grey);
+    }
+    .artist-bio p{
+      font-family: var(--ff-worksans);
+      font-size: var(--fs-400);
+      font-weight: 400;
+      font-style: normal;
+      line-height: 160%;
+    }
+    .artist-links{
+      font-family: var(--ff-spacemono);
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-400);
+      color: var(--clr-grey);
+      margin-top: 1rem;
+    }
+    .links{
+      display: flex;
+      gap: 0.5rem;
+    }
+    .links a{
+      transition: all 0.5s ease-out;
+    }
+    .links a:hover,
+    .links a::before{
+      transform: scale(0.8);
+    }
+
+    .artistpage_buttons{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+    }
+    .artist-button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      background:var(--clr-action-likeblue);
+      padding: 1.2rem 0.7rem;
+      border: none;
+      color: var(--clr-white);
+      border-radius: 0.8rem;
+      font-family: var(--ff-worksans);
+      font-size: var(--fs-300);
+      height: 3rem;
+      text-decoration: none
+    }
+    .button-dark{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid var(--clr-action-likeblue);
+      border-radius: 0.8rem;
+      padding: 1rem 1.3rem;
+      font-weight: var(--fw-bold);
+      font-size: var(--size-300);
+      color: var(--clr-white);
+      background-color: var(--btn-dark);
+      font-family: var(--ff-worksans);
+      cursor: pointer;
+      height: 3rem;
+      text-decoration: none;
+    }
+
+    .card-containers-head{
+      position: relative;
+      top: 400px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      margin-top: 4rem;
+    } 
+    .card-containers{
+      position: relative;
+      top:400px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      background-color: var(--clr-light-black);
+      padding: 3rem;
+    }
+    .main-footer{
+      background-color:var(--clr-light-black);
+      padding: 3rem;
+      position: relative;
+      top: 401px;
+      left: 0%;
+      right: 0%;
+      bottom: 0%;
+    }
+
+
+  /* sig-up section */
+
+    .img-kenuum{
+      width: 610px;
+      height: 500px;
+    }
+    .sign-column {
+      padding: 50px 20px;
+    }
+    .sign-h1{
+        font-family: var(--ff-worksans);
+        font-size: var(--fs-500);
+      }
+    .sign-p{
+      font-family: var(--ff-worksans);
+      font-size: var(--fs-300);
+    }
+    .button{
+      background:var(--clr-action-likeblue);
+      padding: 0.5rem;
+      border: none;
+      color: var(--clr-white);
+      border-radius: var(--size-500);
+      font-family: var(--ff-worksans);
+      font-size: var(--fs-200);
+      height: 2rem;
+    }
+    .sign-input-span{
+      background-color: white;
+      border-radius: var(--size-500);
+      border: 0;
+      height: 2rem;
+    }
+    .input-div{
+      width: 75%;
+    }
+    .form-control{
+      border: none;
+      outline: none;
+      border-radius: var(--size-500);
+      height: 2rem;
+    }
+
+  /* wallet section */
+
+
+    .img-kenuum{
+      width: 610px;
+      height: 500px;
+    }
+    .sign-column {
+      padding: 50px 20px;
+    }
+    .sign-h1{
+      font-family: var(--ff-worksans);
+      font-size: var(--fs-500);
+    }
+    .sign-p{
+      font-family: var(--ff-worksans);
+      font-size: var(--fs-300);
+    }
+  .wallet-button-dark .button-wallet{
+    border: 1px solid var(--clr-action-likeblue);
+    border-radius: var(--size-btn);
+    padding: 1rem 2rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-white);
+    background-color: var(--btn-dark);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    width: 80%;
+  }
+  .button-wallet span{
+    font-size: clamp(0.75rem, -0.408rem + 3.0002vw, 1.875rem);
+  }
+ 
+}
+
+  @media only screen and (min-width: 992px) and (max-width: 1199px){
+    
+  .navbar .navbar-nav {
+    list-style: none;
+  }
+
+  .navbar .navbar-nav .nav-item .nav-link{
+    font-size: 1rem;
+    text-decoration: none;
+    color:var(--clr-white);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-worksans);
+  }
+
+  .btn{
+    border: 0;
+    border-radius: var(--size-btn);
+    color: var(--clr-white);
+    background-color: var(--btn-primary);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    padding: 1rem 2rem;
+  }
+   
+  .btn:hover{
+    background-color: var(--clr-action-likeblue);
+  }
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+  .d-walking{
+    font-size: var(--fs-400);
+    font-family: var(--ff-worksans);
+  }
+  
+  .amounts h4{
+    font-family: var(--ff-spacemono);
+    font-size: var(--fs-700);
+  }
+  .amounts span{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-400);
+  }
+   
+  .spacewolking-direction-1 img{
+    width: 100%;
+    max-height: 20rem;
+  }
+
+  .spacewolking-direction-2{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--clr-light-black);
+    font-weight: var(--fw-semi-bold);
+    padding: 1rem;
+    width: 100%;
+  }
+  .spacewolking-direction-2 .icon-size{
+    width: 24px;
+    height: 24px;
+  }
+
+  .spacewolking-direction-2 h2{
+    font-size: var(--fs-300);
+    font-family: var(--ff-worksans);
+  }
+ 
+  .spacewolking-direction-2 span{
+    font-size: var(--fs-200);
+    font-family: var(--ff-worksans);
+  }
+
+  .fs-secondary-heading{
+    font-size: var(--fs-600);
+    font-family: var(--ff-worksans);
+  }
+  .tc-img{
+    width: 96%;
+  }
+  .t-collection-head{
+    font-size: var(--size-400);
+    font-family: var(--ff-worksans);
+  }
+  .t-collection-d{
+    font-size: var(--size-300);
+    font-family: var(--ff-worksans);
+  }
+ 
+  .top-head{
+    font-size: var(--size-400);
+    font-family: var(--ff-worksans);
+  }
+
+  .category-head{
+    text-align: center;
+    font-size: var(--fs-300);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-worksans);
+    color: var(--clr-white);
+  }
+  .category-body-1{
+    font-size: var(--fs-200);
+    font-family: var(--ff-worksans);
+  }
+  .category-body-2{
+    font-size: var(--fs-200);
+    font-family: var(--ff-spacemono);
+  }
+  .category-card h5{
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: var(--clr-light-black);
+    font-size: var(--fs-300);
+    font-weight: var(--fw-semi-bold);
+    font-family: var(--ff-worksans);
+    padding: 1.5rem;
+  }
+
+  .card{
+    background-color: var(--clr-light-black);
+
+  }
+  .rounded-numbers{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 1.3rem;
+    font-family: var(--ff-spacemono);
+    top: 2%;
+    right: 88%;
+    font-size: var(--fs-200);
+    color: var(--clr-grey);
+  }
+  .avatar-img {
+    width: 60%;
+  }
+ 
+  .card-row-box{
+    background-color: var(--clr-light-black);
+    border-bottom-left-radius: 1.3rem;
+    border-bottom-right-radius: 1.3rem;
+  }
+  .nft-d-text{
+    font-size: var(--fs-300);
+  }
+  .nft-d-num{
+    font-size: var(--fs-300);
+  }
+  .bg-image{
+    background-image: url('images/dekstop.png');
+    background-position: center;
+    background-size:cover;
+    height: 500px;
+  }
+  .artistcard{
+    width: 9rem;
+    height: 2.8rem;
+    background-color: var(--clr-black);
+    border-radius: 1.3rem;
+  }
+  .artistcard p{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-200);
+  }
+  
+  .mobile-highlight-heading h3{
+    font-size: var(--fs-400);
+  }
+ 
+  .artist-row{
+    max-width: 500px;
+  }
+  .artist-row-2{
+    background: rgba(59, 59, 59, 0.5);
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+    max-width: 500px;
+    border-radius: 1.3rem;
+    padding: 1.875rem;
+  }
+  .artist-row-head{
+    font-size: var(--fs-200);
+    font-family: var(--ff-spacemono);
+  }
+  .artist-times{
+    font-size: var(--fs-100);
+    font-family: var(--ff-spacemono);
+  }
+  .info-card{
+    border-radius: 1.3rem;
+    background: var(--clr-light-black);
+    height: 25rem;
+    width: 32%;
+  }
+  .info-card-img .img-fluid{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .info-card-desc h5{
+    font-size: var(--fs-400);
+  }
+  .info-card-desc p{
+    font-size: var(--fs-300);
+    font-family: var(--ff-worksans);
+  }
+
+  .subscribe-widget-row{
+    border-radius: 1.3rem;
+    background-color: var(--clr-light-black);
+    padding: 2.5rem 2rem;
+    
+  }
+  .sub-w-head{
+    font-size: var(--fs-700);
+    font-family: var(--ff-worksans);
+  }
+  .sub-w-subhead{
+    font-size: var(--fs-400);
+    font-family: var(--ff-worksans);
+    margin: 0;
+  }
+
+  
+  
+  .subscribe-forms input {
+    border: 1px solid #cbcbce;
+    border-radius: 1rem;
+    color: #3a3d4b;
+    font-size: var(--fs-300);
+    padding: 0.5rem;
+    outline: none;
+    text-align: left;
+    position: absolute;
+    height: 3rem;
+    width: 70%;
+    font-family: var(--ff-worksans);
+  }
+  
+ .subscribe-forms .button {
+    width: 40%;
+    height: 3rem;
+    position: relative;
+    background:var(--clr-action-likeblue);
+    padding: 0.5rem;
+    border: none;
+    color: var(--clr-white);
+    border-radius: 0.8rem;
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-300);
+    bottom: 0.5rem;
+    left: 61%;
+  
+  }
+  .footer-section{
+    padding: 4rem;
+    background-color: var(--clr-light-black);
+  }
+  .footer-logo{
+    width: clamp(min(100px),80%,max(250px));
+  }
+  .footer-head {
+    font-size: var(--fs-200);
+  }
+  
+  .footer-subscribe-form input {
+    
+    border: 1px solid #cbcbce;
+    border-radius: 0.8rem;
+    color: #3a3d4b;
+    font-size: var(--fs-300);
+    padding: 0.5rem;
+    outline: none;
+    text-align: left;
+    position: absolute;
+    height: 3.25rem;
+    width: 25%;
+    font-family: var(--ff-worksans);
+  }
+  
+ .footer-subscribe-form .footer-button {
+    position: relative;
+    height: 3.25rem;
+    background:var(--clr-action-likeblue);
+    padding: 0.5rem;
+    border: none;
+    color: var(--clr-white);
+    border-radius: 1rem;
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-300);
+    width: 40%;
+    left: 60%;
+  }   
+
+  /* marketplace section */
+  .marketplace-heading{
+    font-size: var(--fs-700);
+    font-family: var(--ff-worksans);
+  }
+  .marketplace-subheading{
+      font-size: var(--fs-300);
+      font-family: var(--ff-worksans);
+  }
+
+  .input-search{
+      border: 1px solid var(--clr-light-black);
+      border-radius: 1rem;
+      font-weight: var(--fw-bold);
+      color: var(--clr-white);
+      background-color: var(--btn-dark);
+      font-family: var(--ff-worksans);
+      cursor: pointer;
+      width: 100%;
+      height: 3.5rem;
+      }
+    .search-button{
+      height: 3.5rem;
+    }
+    .search-container {
+      background-color: var(--clr-black);
+      border: 1px solid var(--clr-light-black);
+      position: relative;
+      border-radius: 1.3rem;
+      padding: 3px 50px 3px 10px;
+    }
+    .search-box {
+      background-color: transparent;
+      outline: none;
+      height: 35px;
+      font-size: 15px;
+      border: 0;
+      width: 100%;
+    }
+    .search-img {
+      position: absolute;
+      right: 2rem;
+      top: 1.2rem;
+      background-color: var(--clr-black);
+      border-radius: 50%;
+      border: 0;
+      color: #FFF;
+      width: 24px;
+      height: 24px;
+      outline: 0;
+    }
+    .marketplace-card{
+      background-color: var(--clr-black);
+      border-bottom-left-radius: 1.3rem;
+      border-bottom-right-radius: 1.3rem;
+    }
+    .content-head{
+      font-size: var(--fs-400);
+    }
+    /* nft-page section */
+    .Keemun_magic{
+      background-image: url('./images/marketplace/nft-page/Keemun_magic.png');
+      background-size: cover;
+      height: 500px;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+ .nft-card{
+      background-color: var(--clr-light-black);
+      border-bottom-left-radius: 1.3rem;
+      border-bottom-right-radius: 1.3rem;
+  } 
+ .main-div-tags{
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+  }
+ .tags-div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 46px;
+      width: auto;
+      padding: 0 1.5rem;
+      border-radius: 1.3rem;
+      background-color: var(--clr-light-black);
+      font-weight: var(--fw-bold);
+      font-family: var(--ff-worksans);
+      text-transform: uppercase;
+  }
+ .nft-row{ 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items:center;
+      background: rgba(59, 59, 59, 0.5);
+      max-width: 250px;
+      margin-left: auto;
+      border-radius: 1.3rem;
+      padding: 1.5rem;
+  }
+  .auction-ands{
+      font-family: var(--ff-spacemono);
+      font-size: var(--fs-200);
+  }
+  .time{
+      font-size: var(--fs-200);
+      font-family: var(--ff-spacemono);
+      color: var(--clr-grey);
+  }
+  .nft-time{
+     font-size: var(--fs-400);
+     font-family: var(--ff-spacemono);
+   
+     
+  }
+  .nft-time span{
+     font-size: var(--fs-400);
+     font-family: var(--ff-spacemono);
+    
+  }
+  .nft-last-time{
+     font-size: var(--fs-400);
+     font-family: var(--ff-spacemono);
+     padding: 0;
+  }
+  .nftpage-button-dark {
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+  }
+  .nft-dark{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 1rem;
+     border: 1px solid var(--clr-action-likeblue);
+     border-radius: var(--size-btn);
+     padding: 1rem 2rem;
+     font-weight: var(--fw-bold);
+     font-size: var(--fs-200);
+     color: var(--clr-white);
+     background-color: var(--btn-dark);
+     font-family: var(--ff-worksans);
+     cursor: pointer;
+     width: 50%;
+  }
+  .nft-button{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      width: 100%;
+      padding: 0.5rem;
+      background:var(--clr-action-likeblue);
+      border: none;
+      color: var(--clr-white);
+      border-radius: 0.8rem;
+      font-family: var(--ff-worksans);
+      font-size: var(--fs-200);
+      margin-top: 0.5rem;
+  }
+  /* ranking section */
+
+  .rankings-heading{
+    font-size: var(--fs-700);
+    font-family: var(--ff-worksans);
+  }
+  .rankings-subheading{
+      font-size: var(--fs-300);
+      font-family: var(--ff-worksans);
+    }
+
+  .rankings-top-head{
+      padding: 1rem;
+      border: 1px solid var(--clr-light-black);
+      border-radius: 20px;
+      font-family: var(--ff-spacemono);
+      color: var(--clr-grey);
+    
+    }
+  .rankings-card{
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: var(--clr-light-black);
+      border-radius: 20px;
+    }
+  .table-header-1{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+    }
+
+  .table-header-2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+  .avatar{
+      width: 60px;
+      height: 60px;
+    }
+  .rounded-number{
+      display: block;
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 1.3rem;
+      font-family: var(--ff-spacemono);
+      background-color: var(--clr-black);
+      font-size: var(--fs-200);
+      color: var(--clr-grey);
+    }
+  .avatar-text{
+      font-size: var(--fs-300);
+      font-weight: var(--fw-semi-bold);
+      padding-left: 1rem;
+    }
+  .txt-color{
+      color: #00AC4F;
+    }
+  .nft-sold{
+    font-size: var(--fs-300);
+    font-family: var(--ff-spacemono);
+  }
+  .nft-volume{
+    font-size: var(--fs-300);
+    font-family: var(--ff-spacemono);
+  }  
+  
+  /* artist page */
+
+  .maindiv-bg{
+    position: relative;
+  }
+  .virtual_world{
+      background: linear-gradient(180deg, rgba(151, 71, 255, 0) 21.88%, #9747FF 95.31%),
+      url('./images/artistpage/bg.png');
+      height: 320px;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      top: 0;
+      bottom:0;
+      left:0;
+      right: 0;
+    }
+  .container-avatar{
+      position: absolute;
+      top: 250px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  .pg-avatar{
+      background-image: url('./images/artistpage/page-avatar.png');
+      background-repeat: no-repeat;
+      height:150px; 
+    }
+  .main-container{
+      position: absolute;
+      top: 500px;
+      left: 0px;
+      right: 0px;
+      bottom: 0;
+    }
+  .artistpage-heading{
+      font-family: var(--ff-worksans);
+    }
+  .stats{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  .stats h4{
+      font-family: var(--ff-spacemono);
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-500);
+    }
+  .stats span{
+      font-family: var(--ff-worksans);
+      font-size:var(--fs-400);
+      font-weight: 400;
+    }
+  .artist-bio{
+      margin-top: 1rem;
+    }
+  .artist-bio span{
+      
+      font-family: var(--ff-spacemono);
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-400);
+      color: var(--clr-grey);
+    }
+  .artist-bio p{
+      font-family: var(--ff-worksans);
+      font-size: var(--fs-400);
+      font-weight: 400;
+      font-style: normal;
+      line-height: 160%;
+    }
+  .artist-links{
+      font-family: var(--ff-spacemono);
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-400);
+      color: var(--clr-grey);
+    }
+  .links{
+      display: flex;
+      gap: 0.5rem;
+      
+    }
+  .links a{
+      transition: all 0.5s ease-out;
+    }
+  .links a:hover,
+  .links a::before{
+      transform: scale(0.8);
+    }
+
+  .artistpage_buttons{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+    }
+  .artist-button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      background:var(--clr-action-likeblue);
+      padding: 1.2rem 0.7rem;
+      border: none;
+      color: var(--clr-white);
+      border-radius: 0.8rem;
+      font-family: var(--ff-worksans);
+      font-size: var(--fs-300);
+      height: 3rem;
+      text-decoration: none
+    }
+  .button-dark{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid var(--clr-action-likeblue);
+      border-radius: 0.8rem;
+      padding: 1rem 1.3rem;
+      font-weight: var(--fw-bold);
+      font-size: var(--size-300);
+      color: var(--clr-white);
+      background-color: var(--btn-dark);
+      font-family: var(--ff-worksans);
+      cursor: pointer;
+      height: 3rem;
+      text-decoration: none;
+    }
+
+  .card-containers-head{
+      position: relative;
+      top: 400px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+    }
+  .card-containers{
+      position: relative;
+      top:400px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      background-color: var(--clr-light-black);
+      padding: 3rem;
+      
+    }
+  .main-footer{
+      background-color:var(--clr-light-black);
+      padding: 3rem;
+      position: relative;
+      top: 401px;
+      left: 0%;
+      right: 0%;
+      bottom: 0%;
+      
+    }
+    
+
+    /* sign-up section */
+
+    .img-kenuum{
+      width: 610px;
+      height: 691px;
+    }
+    .sign-column {
+      padding: 100px 40px;
+    }
+    .sign-h1{
+        font-family: var(--ff-worksans);
+        font-size: var(--fs-800);
+      }
+    .sign-p{
+      font-family: var(--ff-worksans);
+      font-size: var(--fs-400);
+    }
+    .button{
+      background:var(--clr-action-likeblue);
+      padding: 0.5rem;
+      border: none;
+      color: var(--clr-white);
+      border-radius: var(--size-500);
+      font-family: var(--ff-worksans);
+      font-size: var(--fs-300);
+      height: 3rem;
+    }
+    .sign-input-span{
+      background-color: white;
+      border-radius: var(--size-500);
+      height: 3rem;
+      border: 0;
+      height: 3rem;
+    }
+    .input-div{
+      width: 75%;
+    }
+    .form-control{
+      border: none;
+      outline: none;
+      border-radius: var(--size-500);
+    }
+
+    /* wallet section */
+
+
+    .img-kenuum{
+      width: 610px;
+      height: 691px;
+    }
+    .sign-column {
+      padding: 100px 40px;
+    }
+    .sign-h1{
+        font-family: var(--ff-worksans);
+        font-size: var(--fs-800);
+      }
+    .sign-p{
+      font-family: var(--ff-worksans);
+      font-size: var(--fs-400);
+    } 
+    .wallet-button-dark .button-wallet{
+      border: 1px solid var(--clr-action-likeblue);
+      border-radius: var(--size-btn);
+      padding: 1rem 2rem;
+      font-weight: var(--fw-bold);
+      color: var(--clr-white);
+      background-color: var(--btn-dark);
+      font-family: var(--ff-worksans);
+      cursor: pointer;
+      width: 70%;
+    }
+    .button-wallet span{
+      font-size: clamp(0.75rem, -0.808rem + 3.0002vw, 1.875rem);
+    }
+}
+
+  @media only screen and (min-width: 1200px) and (max-width: 1400px){
+    
+  .navbar .navbar-nav {
+   list-style: none;
+  }
+
+  .navbar .navbar-nav .nav-item .nav-link{
+    font-size: 1rem;
+    text-decoration: none;
+    color:var(--clr-white);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-worksans);
+  }
+
+  .btn{
+    border: 0;
+    border-radius: var(--size-btn);
+    color: var(--clr-white);
+    background-color: var(--btn-primary);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    padding: 1rem 2rem;
+  }
+   
+  .btn:hover{
+    background-color: var(--clr-action-likeblue);
+  }
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+  }
+  .d-walking{
+    font-size: var(--fs-400);
+    font-family: var(--ff-worksans);
+  }
+  
+  .amounts h4{
+     font-family: var(--ff-spacemono);
+     font-size: var(--fs-700);
+  }
+  .amounts span{
+    font-family: var(--ff-worksans);
+     font-size: var(--fs-400);
+  }
+  .spacewolking-direction-1 img{
+    width: 100%;
+    max-height: 20rem;
+  }
+
+  .spacewolking-direction-2{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--clr-light-black);
+    font-weight: var(--fw-semi-bold);
+    padding: 1rem;
+    width: 100%;
+ 
+  }
+  .spacewolking-direction-2 .icon-size{
+    width: 24px;
+    height: 24px;
+  }
+
+  .spacewolking-direction-2 h2{
+    font-size: var(--fs-300);
+    font-family: var(--ff-worksans);
+   
+  }
+ 
+  .spacewolking-direction-2 span{
+    font-size: var(--fs-200);
+    font-family: var(--ff-worksans);
+  }
+
+  
+  .fs-secondary-heading{
+    font-size: var(--fs-600);
+    font-family: var(--ff-worksans);
+  }
+  .tc-img{
+    width: 100%;
+  }
+  .t-collection-head{
+    font-size: var(--size-400);
+    font-family: var(--ff-worksans);
+  }
+  .t-collection-d{
+    font-size: var(--size-300);
+    font-family: var(--ff-worksans);
+  }
+ 
+  .top-head{
+    font-size: var(--size-400);
+    font-family: var(--ff-worksans);
+  }
+  .card{
+    background-color: var(--clr-light-black);
+
+  }
+  .rounded-numbers{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 1.3rem;
+    font-family: var(--ff-spacemono);
+    top: 2%;
+    right: 90%;
+    font-size: var(--fs-200);
+    color: var(--clr-grey);
+  }
+  .avatar-img {
+    width: 50%;
+  }
+ 
+  
+  .category-head{
+    text-align: center;
+    font-size: var(--fs-300);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-worksans);
+    color: var(--clr-white);
+  }
+  .category-body-1{
+    text-align: center;
+    font-size: var(--fs-200);
+    font-family: var(--ff-worksans);
+  }
+  .category-body-2{
+    font-size: var(--fs-200);
+    font-family: var(--ff-spacemono);
+  }
+  .category-card h5{
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: var(--clr-light-black);
+    font-size: var(--fs-300);
+    font-weight: var(--fw-semi-bold);
+    font-family: var(--ff-worksans);
+    padding: 1.5rem;
+  }
+  .card-row-box{
+    background-color: var(--clr-light-black);
+    border-bottom-left-radius: 1.3rem;
+    border-bottom-right-radius: 1.3rem;
+   
+  }
+  .nft-d-text{
+    font-size: var(--fs-300);
+  }
+  .nft-d-num{
+    font-size: var(--fs-300);
+  }
+  .bg-image{
+    background-image: url('images/dekstop.png');
+    background-position: center;
+    background-size:cover;
+    height: 500px;
+  }
+  .artistcard{
+    width: 9rem;
+    height: 2.8rem;
+    background-color: var(--clr-black);
+    border-radius: 1.3rem;
+  }
+  .artistcard p{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-200);
+  }
+ 
+  .mobile-highlight-heading h3{
+    font-size: var(--fs-400);
+  }
+ 
+  .artist-row{
+    max-width: 500px;
+  }
+  .artist-row-2{
+    background: rgba(59, 59, 59, 0.5);
+    backdrop-filter: blur(5px);
+    /* Note: backdrop-filter has minimal browser support */
+    max-width: 500px;
+    border-radius: 1.3rem;
+    padding: 1.875rem;
+  }
+  .artist-row-head{
+    font-size: var(--fs-200);
+    font-family: var(--ff-spacemono);
+  }
+  .artist-times{
+    font-size: var(--fs-100);
+    font-family: var(--ff-spacemono);
+  }
+  .info-card{
+    border-radius: 1.3rem;
+    background: var(--clr-light-black);
+    height: 25rem;
+    width: 32%;
+  }
+  .info-card-img .img-fluid{
+    width: 70%;
+    margin: 0 auto;
+  }
+  .info-card-desc h5{
+    font-size: var(--fs-400);
+  }
+  .info-card-desc p{
+    font-size: var(--fs-300);
+    font-family: var(--ff-worksans);
+  }
+
+  .subscribe-widget-row{
+    border-radius: 1.3rem;
+    background-color: var(--clr-light-black);
+    padding: 2.5rem;
+    
+  }
+  .sub-w-head{
+    font-size: var(--fs-900);
+    font-family: var(--ff-worksans);
+  }
+  .sub-w-subhead{
+    font-size: var(--fs-600);
+    font-family: var(--ff-worksans);
+    margin: 0;
+  }
+  
+  
+  .subscribe-forms input {
+    background: #fff;
+    border: 1px solid #cbcbce;
+    border-radius: 3.25rem;
+    color: #3a3d4b;
+    border-radius: 0.8rem;
+    font-size: var(--fs-300);
+    font-family: var(--ff-worksans);
+    padding: 0.5rem;
+    outline: none;
+    text-align: left;
+    position: absolute;
+    height: 3.25rem;
+    
+  }
+  
+ .subscribe-forms .button {
+    position: relative;
+    background:var(--clr-action-likeblue);
+    padding: 0.5rem;
+    border: none;
+    color: var(--clr-white);
+    border-radius: 0.8rem;
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-300);
+    width: 50%;
+    bottom: 0.5rem;
+    left: 50%;
+    height: 3.25rem;
+  }
+  .footer-section{
+    padding: 4rem;
+    background-color: var(--clr-light-black);
+  }
+  .footer-logo{
+    width: clamp(min(100px),80%,max(250px));
+  }
+  .footer-head {
+    font-size: var(--fs-200);
+  }
+  
+  .footer-subscribe-form input {
+    background: #fff;
+    border: 1px solid #cbcbce;
+    border-radius: 1rem;
+    color: #3a3d4b;
+    font-size: var(--fs-300);
+    padding: 0.5rem;
+    outline: none;
+    text-align: left;
+    position: absolute;
+    height: 3.25rem;
+    width: 25%;
+  }
+  
+ .footer-subscribe-form .footer-button {
+    position: relative;
+    height: 3.25rem;
+    background:var(--clr-action-likeblue);
+    padding: 0.5rem;
+    border: none;
+    color: var(--clr-white);
+    border-radius: 1rem;
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-300);
+    width: 40%;
+    left: 60%;
+  }   
+
+  /* marketplace section */
+  .marketplace-heading{
+    font-size: var(--fs-700);
+    font-family: var(--ff-worksans);
+  }
+  .marketplace-subheading{
+      font-size: var(--fs-300);
+      font-family: var(--ff-worksans);
+  }
+
+  .input-search{
+    border: 1px solid var(--clr-light-black);
+    border-radius: 1rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-white);
+    background-color: var(--btn-dark);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    width: 100%;
+    height: 3.5rem;
+    }
+  .search-button{
+    height: 3.5rem;
+  }
+  .search-container {
+    background-color: var(--clr-black);
+    border: 1px solid var(--clr-light-black);
+    position: relative;
+    border-radius: 1.3rem;
+    padding: 3px 50px 3px 10px;
+  }
+  .search-box {
+    background-color: transparent;
+    outline: none;
+    height: 35px;
+    font-size: 15px;
+    border: 0;
+    width: 100%;
+  }
+  .search-img {
+    position: absolute;
+    right: 2rem;
+    top: 1.2rem;
+    background-color: var(--clr-black);
+    border-radius: 50%;
+    border: 0;
+    color: #FFF;
+    width: 24px;
+    height: 24px;
+    outline: 0;
+  }
+  .marketplace-card{
+    background-color: var(--clr-black);
+    border-bottom-left-radius: 1.3rem;
+    border-bottom-right-radius: 1.3rem;
+  }
+  .content-head{
+    font-size: var(--fs-400);
+  }
+  .tab{
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .tab:hover{
+    transform: scale(0.9);
+  }
+  /* nft-page section*/
+  .Keemun_magic{
+    background-image: url('./images/marketplace/nft-page/Keemun_magic.png');
+    background-size: cover;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .nft-card{
+    background-color: var(--clr-light-black);
+    border-bottom-left-radius: 1.3rem;
+    border-bottom-right-radius: 1.3rem;
+  } 
+  .main-div-tags{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .tags-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 46px;
+    width: auto;
+    padding: 0 1.5rem;
+    border-radius: 1.3rem;
+    background-color: var(--clr-light-black);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-worksans);
+    text-transform: uppercase;
+  }
+  .nft-row{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    background: rgba(59, 59, 59, 0.5);
+    max-width: 250px;
+    margin-left: auto;
+    border-radius: 1.3rem;
+    padding: 1.5rem;
+  }
+  .auction-ands{
+    font-family: var(--ff-spacemono);
+    font-size: var(--fs-200);
+  }
+  .time{
+    font-size: var(--fs-200);
+    font-family: var(--ff-spacemono);
+    color: var(--clr-grey);
+  }
+  .nft-time{
+    font-size: var(--fs-400);
+    font-family: var(--ff-spacemono);
+  }
+  .nft-time span{
+    font-size: var(--fs-400);
+    font-family: var(--ff-spacemono);
+  }
+  .nft-last-time{
+    font-size: var(--fs-400);
+    font-family: var(--ff-spacemono);
+    padding: 0;
+  }
+  .nftpage-button-dark {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nft-dark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--clr-action-likeblue);
+    border-radius: var(--size-btn);
+    padding: 1rem 2rem;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-button);
+    color: var(--clr-white);
+    background-color: var(--btn-dark);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    width: 50%;
+  }
+  .nft-button{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    padding: 0.5rem;
+    background:var(--clr-action-likeblue);
+    border: none;
+    color: var(--clr-white);
+    border-radius: 0.8rem;
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-200);
+    margin-top: 0.5rem;
+  }
+    /* ranking section */
+
+  .rankings-heading{
+    font-size: var(--fs-700);
+    font-family: var(--ff-worksans);
+  }
+  .rankings-subheading{
+      font-size: var(--fs-300);
+      font-family: var(--ff-worksans);
+  }
+
+  .rankings-top-head{
+    padding: 1rem;
+    border: 1px solid var(--clr-light-black);
+    border-radius: 20px;
+    font-family: var(--ff-spacemono);
+    color: var(--clr-grey);
+    
+  }
+  .rankings-card{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--clr-light-black);
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .table-header-1{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+  .table-header-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .avatar{
+    width: 60px;
+    height: 60px;
+  }
+  .rounded-number{
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 1.3rem;
+    font-family: var(--ff-spacemono);
+    background-color: var(--clr-black);
+    font-size: var(--fs-200);
+    color: var(--clr-grey);
+  }
+  .avatar-text{
+    font-size: var(--fs-400);
+    font-weight: var(--fw-semi-bold);
+    padding-left: 1rem;
+  }
+  .txt-color{
+    color: #00AC4F;
+  }
+  .nft-sold{
+    font-size: var(--fs-300);
+    font-family: var(--ff-spacemono);
+  }
+  .nft-volume{
+    font-size: var(--fs-300);
+    font-family: var(--ff-spacemono);
+  }  
+
+  /* artist page */
+   
+  .maindiv-bg{
+    position: relative;
+  }
+  .virtual_world{
+    background: linear-gradient(180deg, rgba(151, 71, 255, 0) 21.88%, #9747FF 95.31%),
+    url('./images/artistpage/bg.png');
+    height: 320px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 0;
+    bottom:0;
+    left:0;
+    right: 0;
+  }
+  .container-avatar{
+    position: absolute;
+    top: 250px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .pg-avatar{
+    background-image: url('./images/artistpage/page-avatar.png');
+    background-repeat: no-repeat;
+    height:150px; 
+  }
+  .main-container{
+    position: absolute;
+    top: 500px;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+  }
+  .artistpage-heading{
+    font-family: var(--ff-worksans);
+  }
+  .stats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .stats h4{
+    font-family: var(--ff-spacemono);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-500);
+  }
+  .stats span{
+    font-family: var(--ff-worksans);
+    font-size:var(--fs-400);
+    font-weight: 400;
+  }
+  .artist-bio{
+    margin-top: 1rem;
+  }
+  .artist-bio span{
+    font-family: var(--ff-spacemono);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-400);
+    color: var(--clr-grey);
+  }
+  .artist-bio p{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-400);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 160%;
+  }
+  .artist-links{
+    font-family: var(--ff-spacemono);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-400);
+    color: var(--clr-grey);
+  }
+  .links{
+    display: flex;
+    gap: 0.5rem;
+ 
+  }
+  .links a{
+    transition: all 0.5s ease-out;
+  }
+  .links a:hover,
+  .links a::before{
+    transform: scale(0.8);
+  }
+
+  .artistpage_buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+  }
+  .artist-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background:var(--clr-action-likeblue);
+    padding: 1.2rem 0.7rem;
+    border: none;
+    color: var(--clr-white);
+    border-radius: 0.8rem;
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-300);
+    height: 3rem;
+    text-decoration: none
+  }
+  .button-dark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--clr-action-likeblue);
+    border-radius: 0.8rem;
+    padding: 1rem 1.3rem;
+    font-weight: var(--fw-bold);
+    font-size: var(--size-300);
+    color: var(--clr-white);
+    background-color: var(--btn-dark);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    height: 3rem;
+    text-decoration: none;
+  }
+
+  .card-containers-head{
+    position: relative;
+    top: 400px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+  .card-containers{
+    position: relative;
+    top:400px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: var(--clr-light-black);
+    padding: 3rem;
+  }
+  .main-footer{
+    background-color:var(--clr-light-black);
+    padding: 3rem;
+    position: relative;
+    top: 401px;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;  
+  }
+    
+  /* sign-up section  */
+  .img-kenuum{
+    width: 610px;
+    height: 691px;
+  }
+  .sign-column {
+    padding: 100px 40px;
+  }
+  .sign-h1{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-800);
+  }
+  .sign-p{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-500);
+  }
+  .button{
+    background:var(--clr-action-likeblue);
+    padding: 0.5rem;
+    border: none;
+    color: var(--clr-white);
+    border-radius: var(--size-500);
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-300);
+    height: 3rem;
+  }
+  .sign-input-span{
+    background-color: white;
+    border-radius: var(--size-500);
+    height: 3rem;
+    border: 0;
+    height: 3rem;
+  }
+  .form-control{
+    border: none;
+    outline: none;
+    border-radius: var(--size-500);
+  }
+  .input-div{
+    width: 75%;
+  }
+
+  /* wallet section */
+
+  .img-kenuum{
+    width: 610px;
+    height: 691px;
+  }
+  .sign-column {
+    padding: 100px 40px;
+  }
+  .sign-h1{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-800);
+  }
+  .sign-p{
+    font-family: var(--ff-worksans);
+    font-size: var(--fs-500);
+  }
+  .wallet-button-dark .button-wallet{
+    border: 1px solid var(--clr-action-likeblue);
+    border-radius: var(--size-btn);
+    padding: 1rem 2rem;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-button);
+    color: var(--clr-white);
+    background-color: var(--btn-dark);
+    font-family: var(--ff-worksans);
+    cursor: pointer;
+    width: 70%;
+  }
+  .button-wallet span{
+    font-size: var(--fs-400);
+  }
+
+}
+ 
